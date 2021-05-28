@@ -5,6 +5,9 @@ const jwt = require('jsonwebtoken');
 
 const config = require('../server/config/config').get(process.env.NODE_ENV)
 
+app.use(express.static('client/build'))
+
+
 const mongoose = require('mongoose')
 mongoose.Promise = global.Promise
 mongoose.connect(config.DATABASE,{
@@ -26,6 +29,8 @@ const bcrypt = require('bcrypt');
 const { User } = require('./models/user');
 const {Contactusinfo} = require('./models/contactusform');
 const { Cart } = require('./models/usercart');
+
+
 
 app.post('/api/usersignup',(req,res)=>{
     const user = new User({
@@ -194,5 +199,12 @@ app.get('/api/cart',(req,res)=>{
         })
     })
 })
+
+if(process.env.NODE_ENV === 'production'){
+    const path = require('path')
+    app.get('/*',(req,res)=>{
+        res.sendFile(path.resolve(__dirname,'../client','build','index.html'))
+    })
+}
 
 app.listen(3001)
