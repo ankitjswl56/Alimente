@@ -1,7 +1,7 @@
 const config = {
     production : {
         SECRET : process.env.SECRET,
-        DATABASE : process.env.MONGODB_ATLAS
+        DATABASE : process.env.DATABASE_URI
     },
     default: {
         SECRET : 'SUPERSECRET',
