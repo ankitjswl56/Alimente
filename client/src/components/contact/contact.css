@@ -1,0 +1,98 @@
+.contactus{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background: #ffffff;
+}
+.contactustext{
+    position: relative;
+    font-family: 'Rubik';
+    font-weight: bolder;
+    font-size: 2.5vw;
+    left: 10vw;
+    top: 10vh;
+    width: 30vw;    
+}
+.formmsg{
+    position: relative;
+    font-family: 'Rubik';
+    font-size: 1.4vw;
+    top: 10vh;
+    left: 10vw;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    color: rgb(99, 99, 99);
+    width: 40vw;
+}
+.contactform{
+    position: relative;
+    left: 10vw;
+    top: 10vh;
+    width: 40vw;
+    height: 60vh;
+    display: block;
+}
+
+.contactfirstName{
+    position: relative;
+    height: 5vh;
+    width: 15vw;
+    margin-top: 2vh;
+    margin-right: 3vw;
+    border: 1px solid #000000;
+    border-bottom-left-radius: 5% 10%;
+    border-bottom-right-radius: 5% 10%;
+    border-top-right-radius: 5% 10%;
+    border-top-left-radius: 5% 10%;
+    outline: none;
+    font-size: 1.3vw;
+    padding-left: .5vw;
+}
+.contactEmail{
+    position: relative;
+    height: 5vh;
+    width: 15vw;
+    margin-top: 2vh;
+    margin-right: 3vw;
+    border: 1px solid #000000;
+    border-bottom-left-radius: 5% 10%;
+    border-bottom-right-radius: 5% 10%;
+    border-top-right-radius: 5% 10%;
+    border-top-left-radius: 5% 10%;
+    outline: none;
+    font-size: 1.3vw;
+    padding-left: .5vw;
+}
+.contactMessage{
+    position: relative;
+    height: 33vh;
+    width: 34vw;
+    margin-top: 2vh;
+    margin-right: 3vw;
+    border: 1px solid #000000;
+    border-bottom-left-radius: 5% 10%;
+    border-bottom-right-radius: 5% 10%;
+    border-top-right-radius: 5% 10%;
+    border-top-left-radius: 5% 10%;
+    outline: none;
+    font-size: 1.3vw;
+    padding-left: .5vw;
+    padding-top: 3vh;
+}
+.contactsendbutton{
+    position: relative;
+    height: 5vh;
+    width: 10vw;
+    outline: none;
+    background: #000000;
+    color: #ffffff;
+    font-size: 1.3vw;
+    margin-top: 2vh;
+    margin-left: 3vw;
+    border-bottom-left-radius: 5% 30%;
+    border-bottom-right-radius: 5% 30%;
+    border-top-right-radius: 5% 30%;
+    border-top-left-radius: 5% 30%;
+    cursor: pointer;
+    border: none;
+}

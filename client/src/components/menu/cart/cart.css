@@ -1,0 +1,144 @@
+.cartpage{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background: #34271A;
+    display: inline-flex;
+}
+.cartsection{
+    position: relative;
+    height: 80vh;
+    width: 65vw;
+    left: 5vw;
+    top: 5vh;
+    border: 1px solid #ffffff;
+}
+.emptycart{
+    position: relative;
+    font-family: 'Rubik';
+    text-align: center;
+    top: 5vh;
+    color: #ffffff; 
+    border-bottom: 1px solid #ffffff;
+}
+.cartdetails{
+    position: relative;
+    overflow-y: scroll;
+    width: 65vw;
+    height: 69vh;
+    top: 5vh;
+}
+.eachitembox{
+    position: relative;
+    width: 65vw;
+    height: 15vh;
+    display: inline-flex;
+    border-bottom: 1px solid #DA5F1F;
+}
+.displaynameandprice{
+    position: relative;
+    width: 55vw;
+    height: 15vh;
+}
+.itemnameinbox{
+    position: relative;
+    font-family: 'Rubik';
+    font-size: 1.5vw;
+    color: #DA5F1F;
+    left: 2vw;
+    top: 2vh;
+}
+.itempriceinbox{
+    position: relative;
+    font-family: 'Rubik';
+    font-size: 1.3vw;
+    color: #ffffff;
+    left: 2.5vw;
+    top: 0vh;
+}
+.buttonforeachitem{
+    position: relative;
+    top: 2vw;
+    left: 1vw;
+    height: 3vh;
+    width: 10vh;
+    display: inline-flex;
+    font-family: 'Rubik';
+    font-size: 1.4vw;
+    color: #ffffff;
+}
+.buttonsincartsection{
+    position: relative;
+    font-family: 'Rubik';
+    color: #000000;
+    font-weight: bolder;
+    background: #ffffff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.txtbtwbtn{
+    position: relative;
+    font-family: 'Rubik';
+    font-size: 1.4vw;
+    padding-left: 1vw;
+    padding-right: 1vw;
+}
+.paymentsection{
+    position: relative;
+    left: 7vw;
+    top: 5vh;
+    height: 50vh;
+    width: 25vw;
+    border: 2px solid rgb(15, 219, 15);
+}
+.paymenttxt{
+    position: relative;
+    background: rgb(15, 219, 15);
+    width: 25vw;
+    text-align: center;
+    height: 5vh;
+    font-family: 'Rubik';
+    padding-top: 1vh;
+}
+.paymentoptions{
+    position: relative;
+    height:20vh;
+    width: 25vw;
+}
+.chooseoptions{
+    position: relative;
+    width: 25vw;
+    height: 3vh;
+    margin-top: 2vh;
+    padding-left: 1vw;
+    color: #ffffff;
+    font-family: 'Rubik';
+    font-weight: bolder;
+}
+.bill{
+    position: relative;
+    width: 25vw;
+    height: 15vh;
+    top: 2vh;
+}
+.billtxt{
+    position: relative;
+    font-family: 'Rubik';
+    font-size: 1.3vw;
+    text-align: right;
+    color: #ffffff;
+}
+.buybutton{
+    position: relative;
+    top: 0vh;
+    height: 7vh;
+    width: 25vw;
+    color: #000000;
+    background: #ffffff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-family: 'Rubik';
+    font-size: 1.4vw;
+}

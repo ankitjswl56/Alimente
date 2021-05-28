@@ -1,0 +1,214 @@
+.gallerydrinks{
+    position: relative;
+    height: 120vh;
+    width: 100vw;
+}
+.quote1{
+    position: relative;
+    top: -28vh;
+    left: 5vw;
+    padding-left: 2vw;
+    width: 24vw;
+    font-family: 'Rubik';
+    font-weight: bolder;
+    font-size: 2vw;
+    background-color: rgb(226, 226, 5);
+}
+.gallerycomp2{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    display: inline-flex;
+}
+.comp2textbox{
+    position: relative;
+    left: 20vw;
+    top: 30vh;
+    height: 40vh;
+    width: 25vw;
+    border: 3px solid #000000;
+    background-color: #ffffff;  
+}
+.foodmenutxt{
+    position: relative;
+    text-align: center;
+    font-family: 'Rubik';
+    top: 5vh;
+    font-weight: bolder;
+    color: #000000;
+    font-size: 1.5vw;
+}
+.foodmenudesc{
+    position: relative;
+    text-align: justify;
+    font-family: 'Rubik';
+    top: 9vh;
+    left: 3vw;
+    width: 20vw;
+    font-weight: bolder;
+    color: #000000;
+    font-size: 1.2vw;
+}
+.comp2background{
+    position: relative;
+    top: 10vh;
+    margin-left: 5vw;
+    width: 40vw;
+    height: 80vh;
+    background-color: rgb(182, 170, 0); 
+    z-index: -1;
+}
+.comp2imgdiv{
+    position: relative;
+    top: 8vh;
+    margin-left: -7vw;
+    height: 68vh;
+    width:25vw;
+}
+.imgwithdesc{
+    position: relative;
+    display: inline-flex;
+    top: 5vh;
+    height: 40vh;
+    width: 10vw;
+    margin-bottom: 15vh;
+}
+.burgerimage{
+    position: relative;
+    left: 5vw;
+    width: 20vw;
+    height: 40vh;
+}
+.burgerbox{
+    position: absolute;
+    left: 28vw;
+    width: 20vw;
+    height: 40vh;
+    border: 3px solid #000000;
+}
+.wafferimage{
+    position: relative;
+    left: 32vw;
+    width: 20vw;
+    height: 40vh;
+}
+.wafferbox{
+    position: absolute;
+    left: 75vw;
+    width: 20vw;
+    height: 40vh;
+    border: 3px solid #000000;
+}
+.foodmenudesc2{
+    position: relative;
+    text-align: justify;
+    font-family: 'Rubik';
+    top: 10vh;
+    left: 2vw;
+    width: 16vw;
+    font-weight: bolder;
+    color: #000000;
+    font-size: 1.3vw;
+}
+.gallerywholebackground{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(216, 194, 0);
+    display: inline-flex;
+}
+.gallerysalad{
+    position: relative;
+    left: 10vw;
+    top: 15vh;
+    width: 50vw;
+    height: 70vh;
+}
+
+.saladtopic{
+    position: relative;
+    left: 15vw;
+    font-family: 'Rubik';
+    color: #000000;
+    font-size: 1.9vw;
+    top: 35vh;
+    width: 90vw;
+    height: 10vh;
+    font-weight: bolder;
+}
+.saladdesc{
+    position: relative;
+    left: -8.5vw;
+    font-family: 'Rubik';
+    color: #000000;
+    font-size: 1.4vw;
+    top: 45vh;
+    width: 100vw;
+    height: 30vh;
+    text-align: justify;
+    font-weight: bolder;    
+}
+.gallerytastiest{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+}
+.twotastiestimg{
+    position: relative;
+    top: 20vh;
+    left: 10vw;
+    width: 80vw;
+    background: rgb(216, 194, 0);
+    height: 30vh;
+    display: inline-flex;
+}
+.tastiestimg1{
+    position: relative;
+    left: 8vw;
+    margin-top: -10vh;
+    width: 30vw;
+    height: 50vh;
+    padding-right: 5vw;
+}
+.tastiestheadtxt{
+    position: relative;
+    text-align: center;
+    top: 30vh;
+    font-family: 'Rubik';
+    font-size: 2vw;
+    color: #000000;
+    font-weight: bolder;
+}
+.findoutbutton{
+    position: relative;
+    left: 45vw;
+    top: 35vh;
+    font-family: 'Rubik';
+    font-size: 1.3vw;
+    color: #000000;
+    font-weight: bolder;
+    width: 10vw;
+    height: 7vh;
+    background: rgb(34, 32, 32);
+    color: #ffffff;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.breakfast{
+    position: relative;
+    height: 120vh;
+    width: 100vw;
+}
+.morningtimetxt{
+    position: relative;
+    top: -20vh;
+    text-align: center;
+    font-family: 'Rubik';
+    font-size: 2vw;
+    background-color: #000000;
+    color: #ffffff;
+    height: 7vh;
+    padding-top: 2vh;
+}

@@ -1,0 +1,65 @@
+.userdetails{
+    position: relative;
+    top: 10vh;
+    width: 70vw;
+    left: 5vw;
+    height: 70vh;
+}
+.userimage{
+    position: relative;
+    height: 25vh;
+    width: 12vw;
+    top: 0vh;
+    left: 26.5vw;
+    border-radius: 1vw;
+    margin-bottom: 5vh
+    /* background: #000000; */
+}
+.userimagelogo{
+    position: relative;
+    height: 25vh;
+    width: 12vw;
+    top: 0vh;
+    left: 0vw;
+    border-radius: 1vw;
+    background: #000000;
+    color: #ffffff;    
+}
+.userinfo{
+    position: relative;
+    top: 2vh;
+    left: -15vw;
+}
+.nameofuser{
+    position: relative;
+    left: 23vw;
+    top: 0vh;
+    font-size: 1.5vw;
+    font-family: 'Rubik';
+    color: #ffffff;
+    font-weight: bolder;
+    width: 25vw;
+    height: 5vh;
+    text-align: left;
+    border-radius: .5vw;
+    margin-bottom: 2vh;
+    padding-left: 1vw;
+}
+.belowimage{
+    position: relative;
+    left: 20vw;
+    top: 1vh;
+    text-align: center;
+    background: #2c00a5;
+    padding-top: 1vh;
+    color: #ffffff;
+    padding-left: 0vw;
+}
+.details{
+    position: relative;
+    background: #ffffff;
+    color: #000000;
+    padding-left: 1vw;
+    padding-top: 1vh;
+    width: 50vw;
+}

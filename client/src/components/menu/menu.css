@@ -1,0 +1,110 @@
+.menu{
+    position: relative;
+    /* height: 400vh; */
+    width: 100vw;
+    background: #34271A;
+}
+.menuheading{
+    position: sticky;
+    background: red;
+    height: 10vh;
+    width: 100vw;
+    z-index: 1;
+}
+.menutxt{
+    position: sticky;
+    z-index: 2;
+    text-align: center;
+    top: 8vh;
+    color: #DA5F1F;
+    font-family: 'Rubik';
+    font-size: 3vw;
+    height: 10vh;
+    background: #34271A;
+    padding-top: 2vh;
+    border-top: .5px solid #000000;
+    border-bottom: 1px solid #ffffff;
+}
+.cartlogo{
+    position: fixed;
+    top: 10vh;
+    z-index: 2;
+    left: 88vw;
+    font-size: 4vw;
+    color: #ffffff;
+    cursor: pointer;
+}
+.cartnumber{
+    position: fixed;
+    left: 92vw;
+    top: 10vh;
+    z-index: 2;
+    color: #ffffff;
+}
+.allmenu{
+    position: relative;
+    top: 0vh;
+    left: 5vw;
+    width: 90vw;
+    border: 1px solid #ffffff;
+    padding-bottom: 5vh;
+}
+.menuheadingname{
+    position: sticky;
+    top: 20vh;
+    color: #ffffff;
+    font-family: "Rubik";
+    font-weight: bolder;
+    text-align: center;
+    border-bottom: 1px solid #ffffff;
+    border-top: 1px solid #ffffff;
+    font-size: 1.8vw;
+    background: #34271A;
+    overflow-x: scroll;
+    z-index: 1;
+}
+.menutopics{
+    position: relative;
+    height: 10vh;
+    display: inline-flex;
+    width: 40vw;
+    padding-bottom: 10vh;
+    padding-right: 2vw;
+    margin-left: 2vw;
+}
+.alimentebeforefood{
+    position: relative;
+    color: #ffffff;
+    top: 2vh;
+    padding-top: 3vh;
+    transform: rotate(-45deg);
+    font-family: 'sacramento';
+    font-size: 1.2vw;
+}
+.menutopicname{
+    position: relative;
+    font-family: 'Rubik';
+    color: #DA5F1F;
+    font-size: 1.8vw;
+    left: 0vw;
+    margin-top: 2vh;
+    width: 30vw;
+}
+.menutopicprice{
+    position: relative;
+    font-family: 'Rubik';
+    color: #ffffff;
+    font-size: 1.4vw;
+    left: 1vw;
+    top: 1vh;
+}
+.addtocartbtn{
+    position: relative;
+    left: 1vw;
+    height: 5vh;
+    top: 3vh;
+    width: 6vw;
+    font-family: 'Oregano';
+    font-size: 1vw;
+    cursor: pointer;
+}
