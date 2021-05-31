@@ -48,6 +48,13 @@
 .allorders{
     position: relative;
     top: 0vh;
+    height: 64vh;
+    width: 70vw;
+    color: #ffffff;
+}
+.allordersinside{
+    position: relative;
+    top: 0vh;
     overflow-x: scroll;
     height: 64vh;
     width: 70vw;
@@ -72,7 +79,6 @@
     font-family: 'Rubik';
     color: #ffffff;
     width: 70vw;
-    height: 5vh;
     padding-top: 1vh;
     font-size: 1.3vw;
     font-weight: bolder;

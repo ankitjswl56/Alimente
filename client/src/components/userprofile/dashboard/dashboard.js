@@ -37,7 +37,7 @@ class Dashboard extends Component{
                                     <p className='headingquantity'>Quantity</p>
                                     <p className='headingprice'>Price</p>
                                 </div>
-                                <div>
+                                <div className='allordersinside'>
                                 {this.state.userorders.map((each)=>{
                                     return (
                                         <div className='eachordereddetails' key={each._id}>
