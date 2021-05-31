@@ -4,9 +4,10 @@
     top: 0vh;
     width: 100vw;
     height: 8vh;
-    background: #34271A;   
+    background: #454646;   
     border-bottom: .1px solid #000000;
     display: inline-flex;   
+    color: #000000;
 }
 .alimentelogo{
     position: relative;

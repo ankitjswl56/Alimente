@@ -43,7 +43,7 @@ class Signup extends Component{
 
         }
         return(
-            <div className='userprofile'>
+            <div className='signuppage'>
                 <form className='loginform' onSubmit={(event)=>submitsignupdetails(event)}>
                     <label className='singupalimento'>Alimente</label>
                     <div className='formdetailssection'>
@@ -52,9 +52,9 @@ class Signup extends Component{
                         <input type='password' onChange={(event)=>this.setState({password : event.target.value})} placeholder='Password' className='loginname'/>
                         <input type='text' onChange={(event)=>this.setState({phonenumber : event.target.value})} placeholder='Phone Number' className='loginname'/>
                         <div className='buttonsinform'>
-                            <button className='buttoninsignup' onClick={(event)=>submitsignupdetails(event)}>Sign up</button>
-                            <p className='ortxt'>OR</p>
-                            <Link to='/signin'><button className='buttoninsignup'>Sign in</button></Link>
+                            <button className='buttoninsignuppage' onClick={(event)=>submitsignupdetails(event)}>Sign up</button>
+                            <p className='ortxtinsignup'>OR</p>
+                            <Link to='/signin'><button className='buttoninsignuppage'>Sign in</button></Link>
                         </div>
                     </div>
                 </form>

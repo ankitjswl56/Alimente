@@ -12,9 +12,10 @@
 .textinimage{
     position: absolute;
     top: 25vh;
-    color: #05eecf;
+    color: #ffffff;
     font-family: 'changa One';
 }
+/* #05eecf; */
 .text1{
     position: relative;
     font-size: 5vh;

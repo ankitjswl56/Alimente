@@ -26,16 +26,16 @@ class Signin extends Component{
             }
         }
         return(
-            <div className='userprofile'>
-                <form className='signinform' onSubmit={(event)=>singinnewuser(event)}>
+            <div className='signinpage'>
+                <form className='signinforminsigninpage' onSubmit={(event)=>singinnewuser(event)}>
                     <p className='signinalimento'>Alimente</p>
                     <div>
                         <input type='text' onChange={(event)=>this.setState({email : event.target.value})} placeholder='Email' className='signinloginname'/>
                         <input type='password' onChange={(event)=>this.setState({password: event.target.value})} placeholder='Password' className='signinloginname'/>
                         <div className='buttonsinform'>
-                            <button className='signinbuttoninsignup' onClick={(event)=>singinnewuser(event)}>Sign in</button>
+                            <button className='signinbuttoninsignin' onClick={(event)=>singinnewuser(event)}>Sign in</button>
                             <p className='ortxt'>OR</p>
-                            <Link to='/signup'><button className='signinbuttoninsignup'>Sign up</button></Link>
+                            <Link to='/signup'><button className='signinbuttoninsignin'>Sign up</button></Link>
                         </div>
                     </div>
                     

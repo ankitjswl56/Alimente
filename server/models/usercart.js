@@ -9,10 +9,10 @@ const cartSchema = ({
         foodname : {
             type : String
         },
-        foodquantity : {
+        foodprice : {
             type : String
         },
-        foodprice : {
+        foodquantity : {
             type : String
         }
     }],

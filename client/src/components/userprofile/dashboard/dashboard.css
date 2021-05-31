@@ -4,32 +4,67 @@
     height: 80vh;
     left: 3vw;
     top: 8vh;
-    border: 1px solid #c9c6c6;
+    border: 3px solid #000000;
 }
 .dashboardtxt{
     position: relative;
     left: 2vw;
     top: 2vh;
     font-family: 'Rubik';
-    color: #000000;
+    color: #ffffff;
     margin-right: .5vw;
+}
+.heading{
+    position: relative;
+    display: inline-flex;
+    border-bottom: 3px solid #000000;
+    width: 70vw;
+    height: 7vh;
+}
+.headingname{
+    position: relative;
+    color: #ffffff;
+    width: 34vw;
+    left: 1vw;
+    top: 2vh;
+    font-family: 'Rubik';
+    font-size: 1.3vw;
+}
+.headingquantity{
+    position: relative;
+    color: #ffffff;
+    font-size: 1.3vw;
+    top: 2vh;
+    font-family: 'Rubik';
+    width: 28vw;
+}
+.headingprice{
+    position: relative;
+    top: 2vh;
+    font-size: 1.3vw;
+    font-family: 'Rubik';
+    color: #ffffff;
 }
 .allorders{
     position: relative;
-    top: 5vh;
+    top: 0vh;
     overflow-x: scroll;
-    height: 70vh;
+    height: 64vh;
     width: 70vw;
+    color: #ffffff;
 }
 .lonelydashboard{
     position: relative;
     font-family: 'Rubik';
     color: #ffffff;
     text-align: center;
-    font-size: 1.8vw;
+    top: 5vh;
+    font-weight: bolder;
+    font-size: 2vw;
 }
 .eachordereddetails{
     position: relative;
+    padding-top: 1vh;
 }
 .ordereddetail{
     position: relative;
@@ -38,11 +73,13 @@
     color: #ffffff;
     width: 70vw;
     height: 5vh;
-    padding-top: 1vh
+    padding-top: 1vh;
+    font-size: 1.3vw;
+    font-weight: bolder;
 }
 .stringinsideordereddetail{
     position: relative;
-    width: 50vw;
+    width: 30vw;
     padding-left: 1vw;
 }
 .quaninsideordereddetail{
@@ -53,14 +90,17 @@
 .numinsideordereddetail{
     position: relative;
     text-align: right;
-    width: 10vw;
+    width: 30vw;
 }
 .eachtotalprice{
     position: relative;
     text-align: right;
     font-family: 'Rubik';
-    border-top: 1px solid #000;
-    border-bottom: 1px solid #000;
     padding-right: 3vw;
     color:#ffffff;
+    padding-bottom: 1vh;
+    border-bottom: 1px solid #ffffff;
+    font-size: 1.3vw;
+    height: 4vh;
+    padding-top: 2vh;
 }

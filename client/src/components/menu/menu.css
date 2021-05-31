@@ -1,110 +1,165 @@
 .menu{
     position: relative;
-    /* height: 400vh; */
     width: 100vw;
-    background: #34271A;
+}
+.topofmenu{
+    position: sticky;
+    top: 8vh;
+    display: inline-flex;
+    z-index: 1;
+    background: #ffffff;
+}
+.quote{
+    position: relative;
+    text-align: center;
+    padding-top: 3vh;
+    width: 100vw;
+    font-family: 'Changa One';
+    color: rgb(173, 22, 98);
+    font-size: 3vw;
+    font-weight: bolder;
+    border-bottom: 1px solid rgb(255, 7, 7);
+    margin-right: -5vw;
+    padding-bottom: 2.5vh;
+}
+.cart{
+    position: relative;
+    left: 0vw;
+    font-size: 3vw;
+    padding-top: 2vh;
+    color: #000000;
+}
+.cartlength{
+    position: relative;
+    font-family: 'Rubik';
+    font-size: 1.3vw;
+    left: 3vw;
+    top: -7vh;
+    width: 1vw;
+    text-decoration: none;
+    color: #000000;
+}
+.menusection{
+    position: relative;
+    width: 100vw;
+    top: 3vh;
+    padding-bottom: 3vh;
+    display: inline-flex;
+}
+.menuheadingsection{
+    position: relative; 
+    width: 30vw;
+    border-right: .5px solid #615f5f;
+    padding-top: 18vh;
+    padding-right: 1vw;
+}
+.ourbest{
+    position: relative;
+    text-align: center;
+    font-family: 'Changa One';
+    top: -10vh;
+    margin-bottom: -3vh;
+    font-size: 2vw;
+    color: rgb(173, 22, 98);
 }
 .menuheading{
-    position: sticky;
-    background: red;
-    height: 10vh;
-    width: 100vw;
-    z-index: 1;
-}
-.menutxt{
-    position: sticky;
-    z-index: 2;
-    text-align: center;
-    top: 8vh;
-    color: #DA5F1F;
-    font-family: 'Rubik';
-    font-size: 3vw;
-    height: 10vh;
-    background: #34271A;
-    padding-top: 2vh;
-    border-top: .5px solid #000000;
-    border-bottom: 1px solid #ffffff;
-}
-.cartlogo{
-    position: fixed;
-    top: 10vh;
-    z-index: 2;
-    left: 88vw;
-    font-size: 4vw;
-    color: #ffffff;
-    cursor: pointer;
-}
-.cartnumber{
-    position: fixed;
-    left: 92vw;
-    top: 10vh;
-    z-index: 2;
-    color: #ffffff;
-}
-.allmenu{
     position: relative;
-    top: 0vh;
-    left: 5vw;
-    width: 90vw;
-    border: 1px solid #ffffff;
-    padding-bottom: 5vh;
+    font-family: 'Rubik';
+    font-size: 1.3vw;
+    height: 5vh;
+    text-align: right;
+   
 }
 .menuheadingname{
-    position: sticky;
-    top: 20vh;
-    color: #ffffff;
-    font-family: "Rubik";
-    font-weight: bolder;
-    text-align: center;
-    border-bottom: 1px solid #ffffff;
-    border-top: 1px solid #ffffff;
-    font-size: 1.8vw;
-    background: #34271A;
-    overflow-x: scroll;
-    z-index: 1;
+    position: relative;
+    cursor: pointer;
 }
-.menutopics{
+.menuitems{
+    position: relative;
+    width: 75vw;
+}
+.eachitems{
+    position: relative;
+    height: 15vh;
+    width: 40vw;
+    left: 5vw;
+    padding-top: 5vh;
+    font-family: 'Rubik';
+    font-weight: bolder;
+    display: inline-flex;
+}
+.eachitemsubtopic{
+    position: relative;
+    height: 5vh;
+    width: 60vw;
+    border-bottom: 1px solid rgb(255, 7, 7);
+    left: 5vw;
+    text-align: center;
+    font-size: 1.6vw;
+    padding-top: 5vh;
+    font-family: 'Rubik';
+    font-weight: bolder;
+}
+.eachitemdetails{
+    position: relative;
+    width: 40vw;
+    margin-right: -5vw;
+}
+.eachitemsname{
+    position: relative;
+    font-size: 1.3vw;
+}
+.eachitemsprice{
+    position: relative;
+    top: 2vh;
+    font-size: 1.2vw;
+    left: .5vw;
+}
+.addtocart{
+    position: relative;
+    height: 6vh;
+    width: 7vw;
+    border-radius: .5vw;
+    top: 0vh;
+    left: 10vw;
+    background: #000000;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    font-family: 'Rubik';
+    cursor: pointer;
+}
+.foodimage{
     position: relative;
     height: 10vh;
+    width: 5vw;
+    margin-top: 0vh;
+}
+
+.addedincartbuttons{
+    position: relative;
     display: inline-flex;
-    width: 40vw;
-    padding-bottom: 10vh;
-    padding-right: 2vw;
-    margin-left: 2vw;
 }
-.alimentebeforefood{
+.addedtocart{
     position: relative;
-    color: #ffffff;
-    top: 2vh;
-    padding-top: 3vh;
-    transform: rotate(-45deg);
-    font-family: 'sacramento';
-    font-size: 1.2vw;
-}
-.menutopicname{
-    position: relative;
-    font-family: 'Rubik';
-    color: #DA5F1F;
-    font-size: 1.8vw;
-    left: 0vw;
-    margin-top: 2vh;
-    width: 30vw;
-}
-.menutopicprice{
-    position: relative;
-    font-family: 'Rubik';
-    color: #ffffff;
-    font-size: 1.4vw;
-    left: 1vw;
-    top: 1vh;
-}
-.addtocartbtn{
-    position: relative;
-    left: 1vw;
     height: 5vh;
-    top: 3vh;
-    width: 6vw;
-    font-family: 'Oregano';
-    font-size: 1vw;
+    width: 3vw;
+    border-radius: .5vw;
+    top: 0vh;
+    left: 10vw;
+    background: #000000;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    font-family: 'Rubik';
     cursor: pointer;
+}
+.addedtocartquantity{
+    position: relative;
+    font-family: 'Rubik';
+    font-size: 1.3vw;
+    left: 10vw;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    top: 1vh;
 }

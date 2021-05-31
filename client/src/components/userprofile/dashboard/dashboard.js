@@ -20,7 +20,7 @@ class Dashboard extends Component{
         return(
             <div>
                 <div className='dashboard'>
-                    <div style={{display : 'inline-flex'}}>
+                    <div style={{display : 'inline-flex', borderBottom : '3px solid #000000', width : '70vw', height : '8vh'}}>
                         <HiHome className='dashboardtxt' style={{fontSize : '1.8vw'}}/>
                         <h2 className='dashboardtxt'>Dashboard</h2>    
                     </div>
@@ -31,24 +31,33 @@ class Dashboard extends Component{
                                 <p className='lonelydashboard'>The Dashboard is lonely here. Please order.</p>
                             </div>
                             :
-                            this.state.userorders.map((each)=>{
-                                return (
-                                    <div className='eachordereddetails' key={each._id}>
-                                    {
-                                    each.fooddetail.map((eachone)=>{
-                                    return(
-                                        <div className='ordereddetail' key={eachone._id}>
-                                            <p className='stringinsideordereddetail'>{eachone.foodname}</p>
-                                            <p className='quaninsideordereddetail'>{eachone.foodquantity}</p>
-                                            <p className='numinsideordereddetail'>Rs. {eachone.foodprice}</p>
+                            <div>
+                                <div className='heading'>
+                                    <p className='headingname'>Name</p>
+                                    <p className='headingquantity'>Quantity</p>
+                                    <p className='headingprice'>Price</p>
+                                </div>
+                                <div>
+                                {this.state.userorders.map((each)=>{
+                                    return (
+                                        <div className='eachordereddetails' key={each._id}>
+                                        {
+                                        each.fooddetail.map((eachone)=>{
+                                        return(
+                                            <div className='ordereddetail' key={eachone._id}>
+                                                <p className='stringinsideordereddetail'>{eachone.foodname}</p>
+                                                <p className='quaninsideordereddetail'>{eachone.foodquantity}</p>
+                                                <p className='numinsideordereddetail'>Rs. {eachone.foodprice}</p>
+                                            </div>
+                                            )
+                                        })
+                                        }
+                                        <p className='eachtotalprice'>Total: Rs. {parseFloat(each.totalprice).toFixed(2)}</p>
                                         </div>
-                                        )
-                                    })
-                                    }
-                                    <p className='eachtotalprice'>Rs. {parseFloat(each.totalprice).toFixed(2)}</p>
-                                    </div>
-                                )
-                            })
+                                    )
+                                })}
+                                </div>
+                            </div>
                         }
                     </div>
                 </div>

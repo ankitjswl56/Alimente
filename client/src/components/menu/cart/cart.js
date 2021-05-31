@@ -1,21 +1,19 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { Component } from 'react';
 import './cart.css';
-import { AiOutlineShoppingCart } from 'react-icons/ai';
+import {Link} from 'react-router-dom';
+import Cookies from 'universal-cookie';
 import {connect} from 'react-redux';
-import {checkisauth} from '../../../actions';
 import {cartorder} from '../../../actions';
 
-import Cookies from 'universal-cookie';
 const cookies = new Cookies()
-
 
 class Cart extends Component{
     state = {
         cart : [],
-        debit : false,
-        credit : false,
-        online : false,
-        COD : false
+        checkoutbutton : false,
+        otherpay : false,
+        cod : false
     }
     componentWillMount(){
         if(cookies.get('rescart')){
@@ -23,173 +21,176 @@ class Cart extends Component{
                 cart : [...cookies.get('rescart')]
             })
         }
-        this.props.checkisauth()
     }
     componentWillReceiveProps(nextProps){
-        if(nextProps.user.orders){
+        console.log(nextProps)
+        if(nextProps.user){
             if(nextProps.user.orders.orderconfirm){
                 cookies.remove('rescart')
                 window.location.href = '/userprofile'
+            }else{
+                alert(nextProps.user.orders.message)
             }
         }
     }
     render(){
-    const buy = () =>{
-        if(this.state.COD){
-            if(this.props.user.login.loginauth){
-                const userid = this.props.user.login.userid
-                const totalprice = withtaxbill()
-                const fooddetail = []
-                this.state.cart.map((each)=>{
-                    let oneset = {}
-                    oneset['foodname'] = each.items[0]
-                    oneset['foodquantity'] = each.total
-                    oneset['foodprice'] = each.total * each.items[1]
-                    fooddetail.push(oneset)
-                })
-                this.props.cartorder(userid, fooddetail, totalprice)
-            }else{
-                alert('Please login first')
-                window.location.href = '/signin'
-            }
-        }else{
-            alert('Please select the payment method as COD')
-        }
-    }
-    const reduceitem = (item) =>{
-        const updated = this.state.cart
-        if(item['total'] === 1){
-            const removeditem = []
-            updated.map((each)=>{
-                if(each['items'][0] != item['items'][0]){
-                    removeditem.push(each)
-                }else{
-                    return
-                }
-            })
-            this.setState({
-                cart : removeditem
-            })
-            if(removeditem.length === 0){
-                cookies.remove('rescart')
-            }else{
-                cookies.set('rescart',this.state.cart)
-            }
-        }else{
-            updated.map((each)=>{
-                let flag = 0
-                if(each['items'][0] === item['items'][0]){
-                    each['total'] = Number(each['total']) - 1
-                    flag = 1
-                }
-                if(flag = 1){
-                    return
-                }
-            })
-            this.setState({
-                cart : updated
-            })
-            cookies.set('rescart',this.state.cart)
-        }
-    }
-    const increaseitem = (item) =>{
-        const updated = this.state.cart
-        updated.map((each)=>{
+        const increaseincart = (items) =>{
+            let rescart = this.state.cart    
             let flag = 0
-            if(each['items'][0] === item['items'][0]){
-                each['total'] = Number(each['total']) + 1
-                flag = 1
-            }
-            if(flag = 1){
-                return
-            }
-        })
-        this.setState({
-            cart : updated
-        })
-        cookies.set('rescart',this.state.cart)
-    }
-    const totalbill = () =>{
-        let total = 0
-        this.state.cart.map((each)=>{
-            total = total + (each['items'][1] * each['total'])
-        })
-        return total
-    }
-    const withtaxbill = () =>{
-        let total = 0
-        this.state.cart.map((each)=>{
-            total = total + (each['items'][1] * each['total'])
-        })
-        total = Number(total) + Number(total)*13/100
-        return total
-        // console.log(total)
-    }
-    return(
-        <div className='cartpage'>
-            <div className='cartsection'>
-                {
-                    this.state.cart.length === 0 ?
-                    <h1 className='emptycart'>Cart is Empty</h1>
-                    :
-                    <div>
-                        <h1 className='emptycart'><AiOutlineShoppingCart/></h1>
-                        <div className='cartdetails'>
-                            {this.state.cart.map((each)=>{
-                                return(
-                                    <div className='eachitembox' key={each['items'][0]}>
-                                        <div className='displaynameandprice'>
-                                        <p className='itemnameinbox'>{each['items'][0]}</p>
-                                        <br/>
-                                        <p className='itempriceinbox'>Rs. {each['items'][1]}</p>
-                                        </div>
-                                        <div className='buttonforeachitem'>
-                                            <button className='buttonsincartsection' onClick={()=>reduceitem(each)}>-</button>
-                                            <label className='txtbtwbtn'>{each['total']}</label>
-                                            <button className='buttonsincartsection' onClick={()=>increaseitem(each)}>+</button>
-                                        </div>
-                                    </div>
-                                )
-                            })}
-                        </div>
-                    </div>
+            for(let i of rescart){
+                if(i === items){
+                    i['quantity'] = i['quantity'] + 1
+                    flag = 1
+                    break
                 }
-            </div>
-            {
-                cookies.get('rescart') === undefined ? 
-                null
-                :
-                <div className='paymentsection'>
-                <h3 className='paymenttxt'>Payment options</h3>
-                <div className='paymentoptions'>
-                    <div className='chooseoptions'>
-                        <input type='radio' onChange={()=>alert('Only COD is Available for now')} checked={this.state.debit}/><lable>Debit Card</lable>
-                    </div>
-                    <div className='chooseoptions'>
-                        <input type='radio' onChange={()=>alert('Only COD is Available for now')} checked={this.state.credit}/><lable>Credit Card</lable>
-                    </div>
-                    <div className='chooseoptions'>
-                        <input type='radio' onChange={()=>alert('Only COD is Available for now')} checked={this.state.online}/><lable>Online Banking</lable>
-                    </div>
-                    <div className='chooseoptions'>
-                        <input type='radio' onChange={()=>this.setState({COD : true})}/><lable>Cash On Delivery (COD)</lable>
-                    </div>
-                </div>
-                <div className='bill'>
-                    <p className='billtxt'>Your Bill:<br/> Rs.{totalbill()}</p>
-                    <p className='billtxt'>Tax: 13%</p>
-                    <p className='billtxt'>Total Bill: Rs.{withtaxbill()}</p>
-                </div>
-                <button className='buybutton' onClick={()=>buy()}>Buy</button>
-            </div>
             }
-        </div>
-    )
+            if(flag === 0){
+                items['quantity'] = 1
+                rescart.push(items)
+            }
+            cookies.set('rescart',rescart)
+            this.setState({
+                cart : [...rescart]
+            })
+        }
+        const decreaseincart = (items) =>{
+            let rescart = this.state.cart
+            let flag = 0
+            for(let i of rescart){
+                if(i === items){
+                    if(i[`quantity`] > 1){
+                        i['quantity'] = i['quantity'] - 1
+                        flag = 1
+                        break
+                    }
+                }
+            }
+            if(flag === 0){
+                rescart = (rescart.filter((Each)=>{return Each.name != items.name}))
+            }
+            cookies.set('rescart',rescart)
+            this.setState({
+                cart : [...rescart]
+            })
+        }
+        const totalbill = () =>{
+            let total = 0
+            this.state.cart.map((each)=>{
+                return total = total + (each.price * each.quantity)
+            })
+            return total
+        }
+        const buyfood = () =>{
+            if(this.state.cod){
+               if(this.props.login){
+                   if(this.props.login.loginauth){
+                        let fooddetails = []
+                        for(let i of this.state.cart){
+                            fooddetails.push({
+                                foodname : i.name,
+                                foodprice : i.price,
+                                foodquantity : i.quantity
+                            })
+                        }
+                        this.props.cartorder(this.props.login.userid,fooddetails, (totalbill() + (totalbill() * 13/100)))
+                   }else{
+                       alert('Please signin first')
+                       window.location.href = '/signin'
+                   }
+               }
+            }else{
+                alert('Please select the payment option first')
+            }
+        }
+        return(
+            <div className='cartpage'>
+                <div style={{pointerEvents : this.state.checkoutbutton ? 'none' : null, opacity : this.state.checkoutbutton ? '0.2' : null}}>
+                    <Link to='/menu'><button className='backbutton'>Back</button></Link>
+                    <p className='carttxt'>Your Cart</p>
+                    <div className='cartbox'>
+                        {
+                            this.state.cart.length > 0 ?
+                            <div>
+                                <div className='headingincart'>
+                                    <p className='headingnameincart'>Name</p>
+                                    <p className='headingquantityincart'>Quantity</p>
+                                    <p className='headingpriceincart'>Price</p>
+                                </div>
+                                <div className='cartboxinside'>
+                                    {this.state.cart.map((each,i)=>{
+                                        return(
+                                            <div className='eachitem' key={each.name}>
+                                                <p className='numbersforitems'>{i+1}.</p>
+                                                <div className='itemnameandprice'>
+                                                    <p className='itemname'>{each.name}</p>
+                                                    <p className='itemprice'>Rs. {each.price}</p>
+                                                </div>
+                                                <button className='buttonincart' onClick={()=>decreaseincart(each)}>-</button>
+                                                <p className='itemquantity'>{each.quantity}</p>
+                                                <button className='buttonincart' onClick={()=>increaseincart(each)}>+</button>
+                                                <p className='totalpriceforeach'>Rs. {each.price * each.quantity}</p>
+                                            </div>
+                                        )
+                                    })}
+                                </div>
+                                
+                            </div>
+                            :
+                            <p className='carttxt'>Please select your food first</p>
+                        }
+                    </div>
+                    <div className='checkoutbox'>
+                        {this.state.cart.length > 0 ?
+                        <div>
+                            <p className='carttxt'>Your bill</p>
+                            <div className='billdetails'>
+                            <p className='totalbill'>Total: Rs. {totalbill()}</p>
+                            <p className='totalbill'>Tax: 13%</p>
+                            <p className='totalbill'>Total Amount: Rs. {totalbill() + (totalbill() * 13/100)}</p>
+                            </div>
+                            <button className='checkoutbutton' onClick={()=>[this.setState({checkoutbutton : true}),window.scrollTo(0,0)]}>Check Out</button>
+                        </div>
+                        :
+                        <p className='carttxt'>Please select your food first</p>}
+                    </div>
+                </div> 
+                <div>
+                    {this.state.checkoutbutton ? 
+                    <div className='checkoutprocess'>
+                        <button className='buttoncross' onClick={()=>this.setState({checkoutbutton : false})}>X</button>
+                        <p className='paytxt'>How do you want to pay?</p>
+                        <div className='optionstopay'>
+                            <div className='eachradio'>
+                                <input type='radio' className='radiobuttons' onChange={()=>this.setState({otherpay : false})} checked={this.state.otherpay}/>
+                                <p className='radiooptionsname' >Debit Card</p>
+                            </div>
+                            <div className='eachradio'>
+                                <input type='radio' className='radiobuttons' onChange={()=>this.setState({otherpay : false})} checked={this.state.otherpay}/>
+                                <p className='radiooptionsname'>Credit Card</p>
+                            </div>
+                            <div className='eachradio'>
+                                <input type='radio' className='radiobuttons' onChange={()=>this.setState({otherpay : false})} checked={this.state.otherpay}/>
+                                <p className='radiooptionsname'>Net Banking</p>
+                            </div>
+                            <div className='eachradio'>
+                                <input type='radio' className='radiobuttons' onChange={()=>this.setState({cod : true})} checked={this.state.cod}/>
+                                <p className='radiooptionsname' onClick={()=>this.setState({cod : true})}>Cash On Delivery (COD)</p>
+                            </div>
+                            
+                        </div>
+                        <button className='orderbuttonincart' onClick={()=>buyfood()}>Order</button>
+                    </div>
+                    : 
+                    null
+                    }
+                </div>
+            </div>
+        )
     }
 }
 const mapStateToProps = (state) =>{
-    return {
-        user : state.user_reducer
+    return{
+        login : state.user_reducer.login
     }
 }
-export default connect(mapStateToProps,{checkisauth,cartorder})(Cart)
+export default connect(mapStateToProps,{cartorder})(Cart)

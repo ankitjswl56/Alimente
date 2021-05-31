@@ -1,34 +1,34 @@
-.userprofile{
+.signinpage{
     position: relative;
     height: 100vh;
     width: 100vw;
-    background:linear-gradient(brown,rgb(219, 132, 132));
+    background:linear-gradient(rgb(27, 27, 148) ,rgb(124, 193, 216))
 }
 .signinalimento{
     position: relative;
     font-family: 'sacramento';
-    font-size: 2vw;
-    color: #ffffff;
+    font-size: 2.6vw;
+    color: #000000;
     text-align: center;
     top: 3vh;
     left: 0vw;
     margin-bottom: -7vh;
 }
-.signinform{
+.signinforminsigninpage{
     position: relative;
     top: 20vh;
-    left: 5vw;
-    width: 30vw;
+    width: 25vw;
     height: 45vh;
     border: 2px solid #000000;
-    left: 35vw;
+    left: 38vw;
     border-radius: 7%;
+    background: #ffffff;
 }
 .signinloginname{
     position: relative;
     top:13vh;
     left: 2vw;
-    width: 25vw;
+    width: 20vw;
     height: 7vh;
     font-family: 'Rubik';
     font-weight: bolder;
@@ -42,11 +42,11 @@
     margin-bottom: 3vh;
     padding-left: 1vw;
 }
-.signinbuttoninsignup{
+.signinbuttoninsignin{
     position: relative;
     top: 13vh;
-    left: 3vw;
-    width: 10vw;
+    left: 2vw;
+    width: 8vw;
     height: 5vh;
     background: #000000;
     color: #ffffff;
@@ -55,7 +55,7 @@
     border: none;
     outline: none;
     cursor: pointer;
-    margin-right: 5vw;
+    margin-right: 3vw;
 }
 .ortxt{
     position: relative;
@@ -63,12 +63,12 @@
     font-size: 1.5vw;
     top: 13.5vh;
     font-weight: bolder;
-    color: #ffffff;
-
+    color: #000000;
+    left: .5vw;
 }
 .buttonsinform{
     position: relative;
     display: inline-flex;
-    width: 30vw;
+    width: 25vw;
     top: 0vh;
 }

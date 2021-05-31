@@ -36,23 +36,31 @@ class UserProfile extends Component{
                 <div className='usersection'>
                     <div className='contentlist'>
                         <button className='ordersbutton' 
-                            style={{backgroundColor : this.state.orders ? '#2c00a5' : '#000000', 
-                            color : this.state.orders ? '#ffffff' : '#0000000'}} 
+                            style={{backgroundColor : this.state.orders ? '#000000' : '#ffffff', 
+                            color : this.state.orders ? '#ffffff' : '#000000',
+                            borderLeft : this.state.orders ? null : '2px solid #000000',
+                            borderTop : this.state.orders ? null : '2px solid #000000',
+                            borderBottom : this.state.orders ? null : '2px solid #000000'
+                            }} 
                             autoFocus 
                             onClick={()=>orderbuttonclicked()}
                         >
                             Orders
                         </button>
                         <button className='ordersbutton' 
-                            style={{backgroundColor : this.state.userprofile ? '#2c00a5' : '#000000', 
-                            color : this.state.userprofile ? '#ffffff' : '#0000000'}} 
+                            style={{backgroundColor : this.state.userprofile ? '#000000' : '#ffffff', 
+                            color : this.state.userprofile ? '#ffffff' : '#000000',
+                            borderLeft : this.state.userprofile ? null : '2px solid #000000',
+                            borderTop : this.state.userprofile ? null : '2px solid #000000',
+                            borderBottom : this.state.userprofile ? null : '2px solid #000000'
+                            }} 
                             onClick={()=>userprofileclicked()}
                         >
                             User Profile
                         </button>
                         <button onClick={()=>{logoutuser()}} className='ordersbutton logoutbutton'>Logout</button>
                     </div>
-                    <div>
+                    <div className='dashboardsection'>
                         {this.state.orders ? 
                         <div>
                             <p className='dashboardof'></p>
