@@ -131,7 +131,7 @@ class Home extends Component{
                     <div className='allspecials2'>
                         <div className='boxinspecials'>
                                 <Link to='/menu' style={{textDecoration:'none'}} onClick={()=>[window.scrollTo(0,0),this.props.picclicked('Smoothies')]}>
-                            <img alt='homeimg' src='./images/smoothies.jpg' className='momopic'/>
+                            <img alt='homeimg' src='./images/Smoothies.jpg' className='momopic'/>
                             <p className='momoname'>Smoothies</p>
                             </Link>
                         </div>
@@ -144,7 +144,7 @@ class Home extends Component{
                         <div className='boxinspecials'>
                                 <Link to='/menu' style={{textDecoration:'none'}} onClick={()=>[window.scrollTo(0,0),this.props.picclicked('Bread Bun and Confectionaries')]}>
                             <img alt='homeimg' src='./images/confectionaries.jpeg' className='momopic'/>
-                            <p className='tacosname'>Tacos</p>
+                            <p className='tacosname'>Cakes  </p>
                             </Link>
                         </div>
                     </div>
