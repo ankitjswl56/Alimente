@@ -6,37 +6,6 @@
 }
 .usersection{
     position: relative;
-    display: inline-flex;
-}
-.contentlist{
-    position: relative;
-    width: 20vw;
-    height: 100vh;
-    border-right: 2px solid #000000;
-    background: linear-gradient(rgb(46, 46, 168) ,rgb(39, 174, 219));
-}
-.ordersbutton{
-    position: relative;
-    top: 15vh;
-    left: 5vw;
-    width: 15vw;
-    height: 7vh;
-    border: none;
-    border-top-left-radius: 5% 20%;
-    border-bottom-left-radius: 5% 20%;
-    font-family: 'Rubik';
-    font-size: 1.4vw;
-    text-align: left;
-    background: #ffffff;
-    color: #000000;
-    border-bottom: 2px solid #000000;
-    border-top: 2px solid #000000;
-    border-left: 2px solid #000000;
-    padding-left: 2vw;
-    margin-bottom: 5vh;
-    cursor: pointer;
-    outline: none;
-    font-weight: bolder;
 }
 /* 2c00a5 */
 .dashboardof{
@@ -44,12 +13,46 @@
     font-family: 'Rubik';
     font-size: 1.5vw;
     left: 3.5vw;
-    top: 6vh;
+    top: 0vh;
     font-weight: bolder;
 }
 .dashboardsection{
     position: relative;
     height: 100vh;
-    width: 80vw;
+    width: 100vw;
     background: linear-gradient(rgb(46, 46, 168)  ,rgb(39, 174, 219));
+}
+
+.buttonsdiv{
+    position: relative;
+    height: 10vh;
+    width: 100vw;
+    background: #000000;
+}
+.eachbutton{
+    position: relative;
+    height: 6vh;
+    width: 10vw;
+    left: 40vw;
+    top: 2vh;
+    border: none;
+    border-right: 2px solid #000000;
+    outline: none;
+    cursor: pointer;
+    font-size: 1.1vw;
+    font-family: 'Rubik';
+    font-weight: bolder;
+}
+.logoutbutton{
+    position: relative;
+    left: 70vw;
+    height: 5vh;
+    width: 7vw;
+    border-radius: .5vw;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1.1vw;
+    font-family: 'Rubik';
+    font-weight: bolder;
 }

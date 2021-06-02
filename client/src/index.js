@@ -16,6 +16,7 @@ import UserProfile from './components/userprofile/userprofile';
 import Signin from './components/userprofile/signin/signin';
 import Signup from './components/userprofile/signup/signup';
 import Cart from './components/menu/cart/cart';
+import Resetpassword from './components/userprofile/resetpassword/resetpassword';
 import Authcheck from './hoc/authcheck';
 
 const App = () =>{
@@ -30,6 +31,7 @@ const App = () =>{
             <Route path='/userprofile' exact component={Authcheck(UserProfile,true)}/>
             <Route path='/signin' exact component={Authcheck(Signin,false)}/>
             <Route path='/signup' exact component={Authcheck(Signup,false)}/>
+            <Route path='/resetpassword' exact component={Authcheck(Resetpassword,false)}/>
         </div>
     )
 }

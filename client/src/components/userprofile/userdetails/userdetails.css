@@ -1,16 +1,17 @@
 .userdetails{
     position: relative;
-    top: 10vh;
-    width: 70vw;
-    left: 5vw;
-    height: 70vh;
+    top: 0vh;
+    width: 100vw;
+    left: 0vw;
+    height: 100vh;
+    background: #b4b4b4;
 }
 .userimage{
     position: relative;
     height: 25vh;
     width: 12vw;
-    top: 0vh;
-    left: 26.5vw;
+    top: 5vh;
+    left: 45vw;
     border-radius: 1vw;
     margin-bottom: 5vh
     /* background: #000000; */
@@ -27,18 +28,18 @@
 }
 .userinfo{
     position: relative;
-    top: 2vh;
-    left: -15vw;
+    top: 8vh;
+    left: 20vw;
 }
 .nameofuser{
     position: relative;
-    left: 23vw;
+    left: 20vw;
     top: 0vh;
     font-size: 1.5vw;
     font-family: 'Rubik';
     color: #ffffff;
     font-weight: bolder;
-    width: 25vw;
+    width: 30vw;
     height: 5vh;
     text-align: left;
     border-radius: .5vw;
@@ -47,8 +48,8 @@
 }
 .belowimage{
     position: relative;
-    left: 20vw;
-    top: 1vh;
+    left: 36vw;
+    top: 5vh;
     text-align: center;
     background: #2c00a5;
     padding-top: 1vh;

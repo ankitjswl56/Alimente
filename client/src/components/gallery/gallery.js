@@ -9,30 +9,33 @@ const Gallery = () =>{
                 <img alt='galleryimage' src='./images/gallerydrinks.jpeg' className='gallerydrinks'/>    
                 <p className='quote1'>YOUR FAVOURITE FOOD MAKE IT GOOD</p>
             </div>
-            <div className='gallerycomp2'>
-                <div className='comp2textbox'>
-                    <p className='foodmenutxt'>RESTAURANT FOOD MENU</p>
-                    <p className='foodmenudesc'>All of our food is prepared by the team of trained kitched staff without any risk of little paws getting involved. You can see your food being prepared from the sealed glass in restaurant</p>
+            <div className='component2ofgallery'>
+                <div className='gallerycomp2'>
+                    <div className='comp2textbox'>
+                        <p className='foodmenutxt'>RESTAURANT FOOD MENU</p>
+                        <p className='foodmenudesc'>All of our food is prepared by the team of trained kitched staff without any risk of little paws getting involved. You can see your food being prepared from the sealed glass in restaurant</p>
+                    </div>
+                    <div className='comp2background'/>
+                    <div className='comp2imgdiv'>
+                        <img alt='galleryimage' src='./images/galleryportrait.jpeg' className='comp2imgdiv'/>
+                    </div>
+                    
                 </div>
-                <div className='comp2background'/>
-                <div className='comp2imgdiv'>
-                    <img alt='galleryimage' src='./images/galleryportrait.jpeg' className='comp2imgdiv'/>
-                </div>
-            </div>
-            <div className='imgwithdesc'>
-                <div>
-                    <img alt='galleryimage' src='./images/galleryburger.jpeg' className='burgerimage'/>
-                </div>
-                <div className='burgerbox'>
-                    <p className='foodmenutxt'>Have a healthy afternoon snack</p>
-                    <p className='foodmenudesc2'>The majority of the poeple in the working world are like to be familiar with the mid afternoon snack.</p>
-                </div>
-                <div>
-                    <img alt='galleryimage' src='./images/gallerywaffers.jpeg' className='wafferimage'/>
-                </div>
-                <div className='wafferbox'>
-                    <p className='foodmenutxt'>Include some tasty desserts in your food</p>
-                    <p className='foodmenudesc2'>Dessert is to help aid for the day. However, that's not the only benifit it is known for. </p>
+                <div className='imgwithdesc'>
+                    <div>
+                        <img alt='galleryimage' src='./images/galleryburger.jpeg' className='burgerimage'/>
+                    </div>
+                    <div className='burgerbox'>
+                        <p className='foodmenutxt'>Have a healthy afternoon snack</p>
+                        <p className='foodmenudesc2'>The majority of the poeple in the working world are like to be familiar with the mid afternoon snack.</p>
+                    </div>
+                    <div>
+                        <img alt='galleryimage' src='./images/gallerywaffers.jpeg' className='wafferimage'/>
+                    </div>
+                    <div className='wafferbox'>
+                        <p className='foodmenutxt'>Include some tasty desserts in your food</p>
+                        <p className='foodmenudesc2'>Dessert is to help aid for the day. However, that's not the only benifit it is known for. </p>
+                    </div>
                 </div>
             </div>
             <div className='gallerywholebackground'>

@@ -200,6 +200,77 @@ app.get('/api/cart',(req,res)=>{
     })
 })
 
+const nodemailer = require('nodemailer')
+let transporter = nodemailer.createTransport({
+    service: "gmail",
+    port: 587,
+    secure: false, 
+    auth:{
+        user : 'alimente.restaurant@gmail.com',
+        pass : process.env.EMAILPASS
+    }
+})
+app.post('/api/resetpassword',(req,res)=>{
+    const useremail = req.body.email
+    const usercode = Math.floor(Math.random()*10000) 
+    User.findOne({"email" : useremail},(err,doc)=>{
+        if(err) return res.send('err: ' + err)
+        if(!doc) return res.send({
+            userfound : false,
+            message : 'You are not a registered user.'
+        })
+        const useremail = doc.email
+        doc.passresetcode = usercode
+        doc.save(async function(err,doc){
+            if(err) return res.send({
+                codeadded : false,
+                message: err
+            })
+            let info = await transporter.sendMail({
+                from : 'alimente_restaurant@gmail.com',
+                to : `${useremail}`,
+                subject : 'Reset Password Alimente',
+                html : `<div>
+                    <p>Your code to reset the password is: </p>
+                    <h1>${usercode}</h1>
+                </div>`
+            })
+            res.send({
+                codeadded : true,
+                emailresponse : info.messageId
+            })
+        })
+    })
+})
+app.post('/api/resetpasswordwithcode',(req,res)=>{
+    const usercode = req.body.code
+    const userpassword = req.body.password
+    const useremail = req.body.email
+    User.findOne({"email" : useremail},(err,doc)=>{
+        if(err) return res.send(err)
+        if(String(doc.passresetcode) === usercode){
+            if(doc.password === userpassword){
+                res.send({
+                    passwordupdate : false,
+                    message : 'Password cannot be old password'
+                })
+            }
+            doc.password = userpassword
+            doc.save((err,doc)=>{
+                if(err) return res.send(err)
+                User.updateOne({'email' : useremail},{$unset:{
+                    passresetcode : 1
+                }},(err,doc)=>{
+                    if(err) return res.send(err)
+                })
+                res.send({
+                    passwordupdate : true
+                })
+            })
+        }
+    })
+})
+
 if(process.env.NODE_ENV === 'production'){
     const path = require('path')
     app.get('/*',(req,res)=>{

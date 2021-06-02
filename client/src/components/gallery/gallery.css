@@ -14,6 +14,10 @@
     font-size: 2vw;
     background-color: rgb(226, 226, 5);
 }
+.component2ofgallery{
+    position: relative;
+    height: 160vh;
+}
 .gallerycomp2{
     position: relative;
     height: 100vh;
@@ -211,4 +215,152 @@
     color: #ffffff;
     height: 7vh;
     padding-top: 2vh;
+}
+
+
+
+
+
+@media(max-width:600px){
+    .gallerydrinks{
+        height: 40vh;
+    }
+    .quote1{
+        top: -12vh;
+        font-size: 2.3vw;
+    }
+    .component2ofgallery{
+        height: 80vh;
+    }
+    .gallerycomp2{
+        height: 80vh;
+        width: 100vw;
+    }
+    .comp2textbox{
+        left: 10vw;
+        top: 15vh;
+        height: 18vh;
+        width: 30vw;
+    }
+    .foodmenutxt{
+        top: 2.5vh;
+        font-size: 2vw;
+    }
+    .foodmenudesc{
+        top: 4.5vh;
+        left: 2vw;
+        width: 25vw;
+        font-size: 2vw;
+    }
+    .comp2background{
+        top: 5vh;
+        left: -10vw;
+        width: 50vw;
+        height: 40vh;
+    }
+    .comp2imgdiv{
+        top: 6vh;
+        margin-left: -15vw;
+        height: 25vh;
+        width:30vw;
+    }
+    .imgwithdesc{
+        top: -30vh;
+        height: 30vh;
+        width: 100vw;
+        margin-bottom: 15vh;
+    }
+    .burgerimage{
+        top: 5vh;
+        left: 3vw;
+        width: 25vw;
+        height: 15vh;
+    }
+    .burgerbox{
+        left: 30vw;
+        width: 20vw;
+        top: 5vh;
+        height: 14vh;
+    }
+    .wafferimage{
+        left: 28vw;
+        width: 20vw;
+        top: 5vh;
+        height: 15vh;
+    }
+    .wafferbox{
+        left: 75vw;
+        width: 20vw;
+        top: 5vh;
+        height: 14vh;
+    }
+    .foodmenudesc2{
+        top: 4vh;
+        left: 2vw;
+        width: 16vw;
+        font-size: 1.9vw;
+    }
+    .gallerywholebackground{
+        height: 40vh;
+        width: 100vw;
+    }
+    .gallerysalad{
+        left: 10vw;
+        top: 10vh;
+        width: 40vw;
+        height: 20vh;
+    }
+    .saladtopic{
+        left: 20vw;
+        font-size: 2.4vw;
+        top: 12vh;
+        height: 5vh;
+    }
+    .saladdesc{
+        left: -8.5vw;
+        font-size: 2.4vw;
+        top: 16vh;
+        width: 100vw;
+        height: 30vh;
+    }
+    .gallerytastiest{
+        height: 50vh;
+    }
+    .twotastiestimg{
+        top: 10vh;
+        left: 10vw;
+        width: 80vw;
+        background: rgb(216, 194, 0);
+        height: 15vh;
+    }
+    .tastiestimg1{
+        left: 8vw;
+        margin-top: -3vh;
+        width: 30vw;
+        height: 22vh;
+        padding-right: 5vw;
+    }
+    .tastiestheadtxt{
+        top: 15vh;
+        font-size: 2.8vw;
+    }
+    .findoutbutton{
+        left: 40vw;
+        top: 17vh;
+        font-size: 2.5vw;
+        width: 18vw;
+        height: 3vh;
+        background: rgb(34, 32, 32);
+    }
+    .breakfast{
+        height: 40vh;
+        width: 100vw;
+        margin-bottom: -1vh;
+    }
+    .morningtimetxt{
+        top: -6vh;
+        font-size: 2vw;
+        height: 2vh;
+        padding-top: 1vh;
+    }
 }

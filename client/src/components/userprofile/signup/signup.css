@@ -12,6 +12,7 @@
     text-align: center;
     top: 2vh;
     left: 10vw;
+    font-weight: bold;
 }
 .formdetailssection{
     position: relative;
@@ -46,9 +47,12 @@
     margin-bottom: 2vh;
     padding-left: 1vw;
 }
+.buttonsinform{
+    position: relative;
+}
 .buttoninsignuppage{
     position: relative;
-    top: 13vh;
+    top: 0vh;
     left: 3vw;
     width: 10vw;
     height: 5vh;
@@ -65,8 +69,75 @@
     position: relative;
     font-family:'Oregano';
     font-size: 1.5vw;
-    top: 13.5vh;
+    top: 0vh;
     font-weight: bolder;
     color: #000000;
     left: 2vw;
+}
+
+
+@media(max-width:600px){
+    .signuppage{
+        height: 80vh;
+        width: 100vw;
+        margin-bottom: -1vh;
+    }
+    .singupalimento{
+        top: 2vh;
+        left: 10vw;
+    }
+    .formdetailssection{
+        margin-top: -9vh;
+    }
+    .loginform{
+        top: 15vh;
+        left: 5vw;
+        width: 30vw;
+        height: 60vh;
+        left: 35vw;
+        border-radius: 7%;
+        background: #ffffff;
+    }
+    .loginname{
+        position: relative;
+        top:13vh;
+        left: 2vw;
+        width: 25vw;
+        height: 7vh;
+        font-family: 'Rubik';
+        font-weight: bolder;
+        font-size: 1.2vw;
+        border: 1px solid #000000;
+        border-top-left-radius: 5% 20%;
+        border-top-right-radius: 5% 20%;
+        border-bottom-left-radius: 5% 20%;
+        border-bottom-right-radius: 5% 20%;
+        outline: none;
+        margin-bottom: 2vh;
+        padding-left: 1vw;
+    }
+    .buttoninsignuppage{
+        position: relative;
+        top: 13vh;
+        left: 3vw;
+        width: 10vw;
+        height: 5vh;
+        background: #000000;
+        color: #ffffff;
+        font-size: 1.3vw;
+        border-radius: .5vw;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        margin-right: 2vw;
+    }
+    .ortxtinsignup{
+        position: relative;
+        font-family:'Oregano';
+        font-size: 1.5vw;
+        top: 13.5vh;
+        font-weight: bolder;
+        color: #000000;
+        left: 2vw;
+    }
 }

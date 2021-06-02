@@ -7,23 +7,14 @@ const Userdetails = (props) =>{
         <div className='userdetails'>
             <div className='userimage'><FaUserAlt className='userimagelogo'/></div>
             <div className='nameofuser belowimage'>
-                {props.user.login.name ? props.user.login.name : props.user.login.email}
+                {props.user.login.name}
             </div>
             <div className='userinfo'>
-                <div className='nameofuser details'>
-                    Your Details:
+                <div className='nameofuser'>
+                    <p style={{color : '#000000'}}>Email: {props.user.login.email}</p>
                 </div>
                 <div className='nameofuser'>
-                    <label style={{color : '#000000'}}>Name: </label>{props.user.login.name ? props.user.login.name : props.user.login.email}
-                </div>
-                <div className='nameofuser'>
-                    <label style={{color : '#000000'}}>Email: </label>{props.user.login.email}
-                </div>
-                <div className='nameofuser'>
-                    <label style={{color : '#000000'}}>Phone Number: </label>{props.user.login.phonenumber}
-                </div>
-                <div>
-                    
+                    <p style={{color : '#000000'}}>Mobile: {props.user.login.phonenumber}</p>
                 </div>
             </div>
             

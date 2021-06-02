@@ -136,22 +136,31 @@ class Cart extends Component{
                                 
                             </div>
                             :
-                            <p className='carttxt'>Please select your food first</p>
+                            <p className='carttxt' style={{color:'#000000'}}>Please select your food first</p>
                         }
                     </div>
                     <div className='checkoutbox'>
                         {this.state.cart.length > 0 ?
                         <div>
-                            <p className='carttxt'>Your bill</p>
+                            <p className='carttxt yourbill'>Your bill</p>
                             <div className='billdetails'>
-                            <p className='totalbill'>Total: Rs. {totalbill()}</p>
-                            <p className='totalbill'>Tax: 13%</p>
-                            <p className='totalbill'>Total Amount: Rs. {totalbill() + (totalbill() * 13/100)}</p>
+                            <div className='totalbilldiv'>
+                                <p className='totalbill'>Total:</p>
+                                <p className='totalbillnum'>Rs. {parseInt(totalbill()).toFixed(2)}</p>
+                            </div>
+                            <div className='totalbilldiv'>
+                                <p className='totalbill'>Tax:</p>
+                                <p className='totalbillnum'>13%</p>
+                            </div>
+                            <div className='totalbilldiv'>
+                                <p className='totalbill'>Total Amount:</p>
+                                <p className='totalbillnum'>Rs. {parseInt(totalbill() + (totalbill() * 13/100)).toFixed(2)}</p>
+                            </div>
                             </div>
                             <button className='checkoutbutton' onClick={()=>[this.setState({checkoutbutton : true}),window.scrollTo(0,0)]}>Check Out</button>
                         </div>
                         :
-                        <p className='carttxt'>Please select your food first</p>}
+                        <p className='carttxt' style={{color:'#000000'}}>Please select your food first</p>}
                     </div>
                 </div> 
                 <div>

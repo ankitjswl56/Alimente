@@ -6,7 +6,7 @@ import {AiOutlineShoppingCart} from 'react-icons/ai'
 import {Link} from 'react-router-dom';
 import Cookies from 'universal-cookie';
 const cookies = new Cookies()
-    
+
 class Menu extends Component{
     state = {
         menuselect : 'Himalayan Tea',
@@ -18,6 +18,11 @@ class Menu extends Component{
         if(cookies.get('rescart')){
             this.setState({
                 cart : [...cookies.get('rescart')]
+            })
+        }
+        if(this.props.picclicked != ''){
+            this.setState({
+                menuselect : this.props.picclicked
             })
         }
     }
@@ -163,7 +168,7 @@ class Menu extends Component{
                             this.state.cart.length > 0 ?
                             <p className='cartlength'>{this.state.cart.length}</p>
                             :
-                            <p className='cartlength'> </p>
+                            null
                         }
                     </Link>
                 </div>
@@ -192,8 +197,10 @@ class Menu extends Component{
     }
 }
 const mapStateToProps = (state) =>{
+    console.log(state)
     return{
-        menu : state.menureducers.menu
-    }
+        menu : state.menureducers.menu,
+        picclicked : state.picclicked
+    }   
 }
 export default connect(mapStateToProps,{fetchmenu})(Menu)

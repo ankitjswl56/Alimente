@@ -124,3 +124,125 @@
     border-top-right-radius: 1% 2%;
 }
 /* ------------------------------------------------------------------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width:600px){
+    .whoarewe{
+        height: 50vh;
+    }
+    .whoarewetext{
+        font-size: 3vw;
+        left: 30vw;
+        top: 5vh;
+        height: 5vh;
+    }
+    .fewwords{
+        top: 5vh;
+    }
+    .whoareweimg{
+        top: 5vh;
+        height: 30vh;
+        width: 55vw;
+        left: -10vw;
+    }
+    .fewwordstxt1{
+        position: relative;
+        top: 5vh;
+        font-size: 2.6vw;
+        left: -10vw;
+    }
+    .fewwordstxt2{
+        left: -10vw;
+        top: 8vh;
+        font-size: 2.4vw;
+        width: 35vw;   
+    }
+    .ourpromises{
+        height: 50vh;
+    }
+    .safeppromise{
+        top: 5vh;
+        left: 5vw;
+    }
+    .promisetxt{
+        top: 9vh;
+        font-size: 2.6vw;
+        width: 65vw;
+        line-height: 2.6vh;
+    }
+    .peoplesayaboutus{
+        height: 55vh;
+    }
+    .peoplesaytext{
+        left: 38vw;
+        height: 5vh;
+        top: 5vh;
+    }
+    .location{
+        top: 5vh;
+        left: 5vw;
+        height: 30vh;
+    }
+}

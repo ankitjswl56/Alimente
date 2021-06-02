@@ -4,7 +4,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
 import { Link } from 'react-router-dom'
 import './home.css';
-import {signupuser,signinuser} from '../../actions'
+import {signupuser,signinuser,picclicked} from '../../actions'
 import {connect} from 'react-redux';
 
 import { GiMeal } from 'react-icons/gi'
@@ -16,7 +16,8 @@ class Home extends Component{
         name : '',
         email : '',
         password : '',
-        phonenumber : ''
+        phonenumber : '',
+        picclicked : ''
     }
     componentWillReceiveProps(nextProps){
         if(nextProps.user.login.loginauth){
@@ -109,19 +110,19 @@ class Home extends Component{
                     <p className='ourspecialtxt'>TRY OUR SPECIALS</p>
                     <div className='allspeicals1'>
                         <div className='boxinspecials'>
-                            <Link to='./menu' style={{textDecoration:'none'}} onClick={()=>window.scrollTo(0,0)}>
-                            <img alt='homeimg' src='./images/ourspecial1.png' className='recommendedpics'/>
-                            <p className='spcialsnames'>Sushi</p>
+                            <Link to='/menu' style={{textDecoration:'none'}} onClick={()=>[window.scrollTo(0,0),this.props.picclicked('Juicy Momo')]}>
+                            <img alt='homeimg' src='./images/momo.png' className='momopic'/>
+                            <p className='momoname'>Momo</p>
                             </Link>
                         </div>
                         <div className='boxinspecials'>
-                            <Link to='./menu' style={{textDecoration:'none'}} onClick={()=>window.scrollTo(0,0)}>
+                            <Link to='/menu' style={{textDecoration:'none'}} onClick={()=>[window.scrollTo(0,0),this.props.picclicked('Sandwich and Burgers')]}>
                             <img alt='homeimg' src='./images/ourspecial2.png' className='recommendedpics'/>
                             <p className='spcialsnames'>Burgers</p>
                             </Link>
                         </div>
                         <div className='boxinspecials'>
-                            <Link to='./menu' style={{textDecoration:'none'}} onClick={()=>window.scrollTo(0,0)}>
+                            <Link to='/menu' style={{textDecoration:'none'}} onClick={()=>[window.scrollTo(0,0),this.props.picclicked('Italian')]}>
                             <img alt='homeimg' src='./images/ourspecial3.png' className='recommendedpics'/>
                             <p className='spcialsnames'>Pizzas</p>
                             </Link>
@@ -129,21 +130,21 @@ class Home extends Component{
                     </div>
                     <div className='allspecials2'>
                         <div className='boxinspecials'>
-                                <Link to='./menu' style={{textDecoration:'none'}} onClick={()=>window.scrollTo(0,0)}>
-                            <img alt='homeimg' src='./images/ourspecial4.png' className='recommendedpics'/>
-                            <p className='spcialsnames'>Barbecue</p>
+                                <Link to='/menu' style={{textDecoration:'none'}} onClick={()=>[window.scrollTo(0,0),this.props.picclicked('Smoothies')]}>
+                            <img alt='homeimg' src='./images/smoothies.jpg' className='momopic'/>
+                            <p className='momoname'>Smoothies</p>
                             </Link>
                         </div>
                         <div className='boxinspecials'>
-                                <Link to='./menu' style={{textDecoration:'none'}} onClick={()=>window.scrollTo(0,0)}>
+                            <Link to='/menu' style={{textDecoration:'none'}} onClick={()=>[window.scrollTo(0,0),this.props.picclicked('Sandwich and Burgers')]}>
                             <img alt='homeimg' src='./images/ourspecial5.png' className='recommendedpics'/>
                             <p className='spcialsnames'>Sandwiches</p>
                             </Link>
                         </div>
                         <div className='boxinspecials'>
-                                <Link to='./menu' style={{textDecoration:'none'}} onClick={()=>window.scrollTo(0,0)}>
-                            <img alt='homeimg' src='./images/ourspecial6.png' className='recommendedpics'/>
-                            <p className='spcialsnames'>Tacos</p>
+                                <Link to='/menu' style={{textDecoration:'none'}} onClick={()=>[window.scrollTo(0,0),this.props.picclicked('Bread Bun and Confectionaries')]}>
+                            <img alt='homeimg' src='./images/confectionaries.jpeg' className='momopic'/>
+                            <p className='tacosname'>Tacos</p>
                             </Link>
                         </div>
                     </div>
@@ -267,5 +268,5 @@ const mapStateToProps = (state) =>{
         user : state.user_reducer
     }
 }
-export default connect(mapStateToProps,{signupuser,signinuser})(Home) ;
+export default connect(mapStateToProps,{signupuser,signinuser,picclicked})(Home) ;
 

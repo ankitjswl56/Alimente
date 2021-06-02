@@ -22,6 +22,10 @@ const userschema = mongoose.Schema({
         maxlength : 10,
         minlength : 10
     },
+    passresetcode : {
+        type : Number,
+        minlength : 4
+    },
     token : {
         type : String
     }

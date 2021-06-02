@@ -85,3 +85,28 @@ export const fetchorders = (userid) =>{
         })   
     }
 }
+
+export const picclicked = (picname) =>{
+    return {
+        type : 'PIC_CLICKED',
+        payload : picname
+    }
+}
+export const resetpassword = (email) =>{
+    return async function(dispatch){
+        const response = await axios.post('/api/resetpassword',{email})
+        dispatch({
+            type : 'RESET_PASSWORD',
+            payload  : response.data
+        })
+    }
+}
+export const resetpasswordwithcode = (code,password,email) =>{
+    return async function (dispatch){
+        const response = await axios.post('/api/resetpasswordwithcode',{code,password,email})
+        dispatch({
+            type : 'RESET_PASSWORD_WITHCODE',
+            payload  : response.data
+        })
+    }
+}

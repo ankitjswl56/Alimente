@@ -49,3 +49,31 @@
     margin-right: -3vw;
     font-size: 3vw;
 }
+
+
+
+@media (max-width:600px){
+    .headerbodyformat{
+        height: 4vh
+    }
+    .alimentelogo{
+        font-size: 4vw;
+    }
+    .headerlinks{
+        left: 35vw;
+        width: 50vw;
+    }
+    .linksinheader{
+        position: relative;
+        height: 3vh;
+        margin-top: -.5vh;
+        margin-right: 0vw;
+        font-size: 1.5vw;    
+    }
+    .userlogo{
+        position: relative;
+        top: 1vh;
+        left: 2vw;
+        font-size: 2vw;
+    }
+}

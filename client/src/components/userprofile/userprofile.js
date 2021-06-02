@@ -34,31 +34,16 @@ class UserProfile extends Component{
         return(
             <div className='userprofile'>
                 <div className='usersection'>
-                    <div className='contentlist'>
-                        <button className='ordersbutton' 
-                            style={{backgroundColor : this.state.orders ? '#000000' : '#ffffff', 
-                            color : this.state.orders ? '#ffffff' : '#000000',
-                            borderLeft : this.state.orders ? null : '2px solid #000000',
-                            borderTop : this.state.orders ? null : '2px solid #000000',
-                            borderBottom : this.state.orders ? null : '2px solid #000000'
-                            }} 
-                            autoFocus 
-                            onClick={()=>orderbuttonclicked()}
-                        >
+                    <div className='buttonsdiv'>
+                        <button onClick={()=>orderbuttonclicked()} className='eachbutton'>
                             Orders
                         </button>
-                        <button className='ordersbutton' 
-                            style={{backgroundColor : this.state.userprofile ? '#000000' : '#ffffff', 
-                            color : this.state.userprofile ? '#ffffff' : '#000000',
-                            borderLeft : this.state.userprofile ? null : '2px solid #000000',
-                            borderTop : this.state.userprofile ? null : '2px solid #000000',
-                            borderBottom : this.state.userprofile ? null : '2px solid #000000'
-                            }} 
-                            onClick={()=>userprofileclicked()}
-                        >
+                        <button  onClick={()=>userprofileclicked()} className='eachbutton'>
                             User Profile
                         </button>
-                        <button onClick={()=>{logoutuser()}} className='ordersbutton logoutbutton'>Logout</button>
+                        <button onClick={()=>{logoutuser()}} className='eachbutton logoutbutton'>
+                            Logout
+                        </button>
                     </div>
                     <div className='dashboardsection'>
                         {this.state.orders ? 

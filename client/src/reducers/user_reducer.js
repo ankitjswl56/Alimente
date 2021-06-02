@@ -16,6 +16,10 @@ export default (state={},action)=>{
             return {...state, orders:action.payload}
         case 'FETCH_ORDERS':
             return {...state, userorders : action.payload}
+        case 'RESET_PASSWORD':
+            return{...state, codeadded : action.payload}
+        case 'RESET_PASSWORD_WITHCODE':
+            return {...state, passwordupdated: action.payload}
         default:
             return state
     }

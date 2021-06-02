@@ -32,8 +32,13 @@ class Signin extends Component{
                     <div>
                         <input type='text' onChange={(event)=>this.setState({email : event.target.value})} placeholder='Email' className='signinloginname'/>
                         <input type='password' onChange={(event)=>this.setState({password: event.target.value})} placeholder='Password' className='signinloginname'/>
+                        <div>
+                            <Link to='/resetpassword'>
+                                <p className='forgetpassword'>Forget password ?</p>
+                            </Link>
+                        </div>
                         <div className='buttonsinform'>
-                            <button className='signinbuttoninsignin' onClick={(event)=>singinnewuser(event)}>Sign in</button>
+                            <button className='signinbuttoninsignin' type='submit' onClick={(event)=>singinnewuser(event)}>Sign in</button>
                             <p className='ortxt'>OR</p>
                             <Link to='/signup'><button className='signinbuttoninsignin'>Sign up</button></Link>
                         </div>
