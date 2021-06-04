@@ -1,20 +1,19 @@
 .userdetails{
     position: relative;
-    top: 0vh;
-    width: 100vw;
+    padding-top: 10vh;
+    width: 90vw;
     left: 0vw;
-    height: 100vh;
-    background: #b4b4b4;
+    height: 90vh;
+    background: #ffffff;
 }
 .userimage{
     position: relative;
     height: 25vh;
     width: 12vw;
-    top: 5vh;
-    left: 45vw;
+    top: 0vh;
+    left: 37vw;
     border-radius: 1vw;
-    margin-bottom: 5vh
-    /* background: #000000; */
+    margin-bottom: 5vh;
 }
 .userimagelogo{
     position: relative;
@@ -28,8 +27,9 @@
 }
 .userinfo{
     position: relative;
-    top: 8vh;
-    left: 20vw;
+    top: 0vh;
+    left: 8vw;
+    width: 70vw;
 }
 .nameofuser{
     position: relative;
@@ -45,16 +45,21 @@
     border-radius: .5vw;
     margin-bottom: 2vh;
     padding-left: 1vw;
+    padding-bottom: 1vh;
+    cursor: pointer;
+    border: 1px solid #000000;
 }
 .belowimage{
     position: relative;
-    left: 36vw;
-    top: 5vh;
+    left: 21vw;
+    top: 0vh;
+    width: 45vw;
     text-align: center;
     background: #2c00a5;
     padding-top: 1vh;
     color: #ffffff;
     padding-left: 0vw;
+    font-size: 1.9vw;
 }
 .details{
     position: relative;
@@ -63,4 +68,112 @@
     padding-left: 1vw;
     padding-top: 1vh;
     width: 50vw;
+}
+.iconuserdetail{
+    position: relative;
+    font-size: 2vw;
+    top: 1vh;
+}
+.buttonsinuserdetails{
+    position: relative;
+    height: 15vh;
+    width: 90vw;
+}
+.chngpswdbtn{
+    position: relative;
+    left: 12vw;
+    top: 6vh;
+    height: 6vh;
+    width: 10vw;
+    border-radius: .5vw;
+    border: 1px solid #000000;
+    outline: none;
+    color: #000000;
+    background: #ffffff;
+    cursor: pointer;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1vw;
+    margin-right: 18vw;
+}
+.formchangepassword{
+    position: relative;
+    top: 15vh;
+    left: 30vw;
+    height: 50vh;
+    width: 25vw;
+    border-radius: 2vw;
+    border: 2px solid #000000;
+    display: block;
+}
+.formdetailsepassword{
+    position: relative;
+    top: 15vh;
+    left: 30vw;
+    height: 50vh;
+    width: 25vw;
+    border-radius: 2vw;
+    border: 2px solid #000000;
+    display: block;
+}
+.alimentepass{
+    position: relative;
+    margin-top: -5vh;
+    width: 20vw;
+    margin-left: 2vw;
+}
+.chngpswrdtxt{
+    position: relative;
+    font-family: 'Rubik';
+    font-size: 1.4vw;
+    left: 0vw;
+    top: 10vh;
+    text-align: center;
+    font-weight: bolder;
+}
+.newpassword{
+    position: relative;
+    height: 5vh;
+    width: 19vw;
+    left: 2vw;
+    padding-left: 1vw;
+    top: 12vh;
+    margin-bottom: 3vh;
+    border-radius: .5vw;
+    border: 1px solid #000000;
+    outline: none;
+    padding-top: .5vh;
+    font-size: 1.3vw;
+}
+.newpasssbtn{
+    position: relative;
+    top: 12vh;
+    height: 5vh;
+    width: 7vw;
+    left: 9vw;
+    font-family: 'Rubik';
+    font-size: 1.2vw;
+    font-weight: bolder;
+    border-radius: .5vw;
+    background: #331ac2;
+    border: 1px solid #000000;
+    cursor: pointer;
+    color: #ffffff;
+
+}
+.passwordcrossbutton{
+    position: relative;
+    left: 22vw;
+    top: 2vh;
+    background: #ffffff;
+    color: #000000;
+    font-weight: bolder;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 50vw;
+    height: 4vh;
+    width: 2vw;
+}
+.lgineml{
+    background: #b4b3b3;
 }

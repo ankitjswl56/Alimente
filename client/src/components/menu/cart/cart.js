@@ -92,7 +92,7 @@ class Cart extends Component{
                                 foodquantity : i.quantity
                             })
                         }
-                        this.props.cartorder(this.props.login.userid,fooddetails, (totalbill() + (totalbill() * 13/100)))
+                        this.props.cartorder(this.props.login.userid,this.props.login.email,fooddetails, (totalbill() + (totalbill() * 13/100)))
                    }else{
                        alert('Please signin first')
                        window.location.href = '/signin'
@@ -107,7 +107,7 @@ class Cart extends Component{
                 <div style={{pointerEvents : this.state.checkoutbutton ? 'none' : null, opacity : this.state.checkoutbutton ? '0.2' : null}}>
                     <Link to='/menu'><button className='backbutton'>Back</button></Link>
                     <p className='carttxt'>Your Cart</p>
-                    <div className='cartbox'>
+                    <div className='cartbox' data-aos='fade-up'>
                         {
                             this.state.cart.length > 0 ?
                             <div>
@@ -136,7 +136,7 @@ class Cart extends Component{
                                 
                             </div>
                             :
-                            <p className='carttxt' style={{color:'#000000'}}>Please select your food first</p>
+                            <p className='carttxt emptycarttxt' style={{color:'#000000'}}>Please select your food first</p>
                         }
                     </div>
                     <div className='checkoutbox'>
@@ -160,7 +160,7 @@ class Cart extends Component{
                             <button className='checkoutbutton' onClick={()=>[this.setState({checkoutbutton : true}),window.scrollTo(0,0)]}>Check Out</button>
                         </div>
                         :
-                        <p className='carttxt' style={{color:'#000000'}}>Please select your food first</p>}
+                        <p className='carttxt emptycarttxt' style={{color:'#000000'}}>Please select your food first</p>}
                     </div>
                 </div> 
                 <div>

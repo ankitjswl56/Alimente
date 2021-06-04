@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import './header.css';
 import { FaUserAlt } from 'react-icons/fa';
-import { connect } from 'react-redux';
  
 class Header extends Component{
     render(){
@@ -28,7 +27,4 @@ class Header extends Component{
     )
     }
 }
-const mapStateToProrps = (state) =>{
-   return{}
-}
-export default connect(mapStateToProrps)(Header);
+export default Header;

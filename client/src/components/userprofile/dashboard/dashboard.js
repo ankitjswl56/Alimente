@@ -3,6 +3,7 @@ import './dashboard.css';
 import { HiHome } from 'react-icons/hi';
 import {connect} from 'react-redux';
 import {fetchorders} from '../../../actions'
+import {Link} from 'react-router-dom';
 
 class Dashboard extends Component{
     state = {
@@ -13,19 +14,39 @@ class Dashboard extends Component{
     }
     componentWillReceiveProps(nextProps){
         if(nextProps.userorders.userorders){
-            this.setState({userorders : nextProps.userorders.userorders.details.reverse()})
+            if(nextProps.userorders.userorders.userorders){
+                this.setState({
+                    userorders : nextProps.userorders.userorders.details.orderedfoods.reverse()
+                })
+            }
         }
     }
     render(){
         return(
             <div>
                 <div>
-                    <div className='dashboarddiv'>
+                    <div className='dashboarddiv' data-aos='fade-right' data-aos-duration='700'>
                         <HiHome className='dashboardtxt' style={{fontSize : '2.2vw'}}/>
                         <h2 className='dashboardtxt'>Dashboard</h2>         
                     </div>
                     <div className='dashboard'>
-                        <div className='allorders'>
+                        <div className='totalorderdetails' data-aos='fade-up' data-aos-delay='300'>
+                            <div className='totalorderdiv'>
+                                <p className='totalordernum'>{this.state.userorders.length}</p>
+                                <p className='totalordertxt'>Total Orders</p>
+                            </div>
+                            <div className='deliveredorderdiv'>
+                                <p className='totalordernum'>{this.state.userorders.length}</p>
+                                <p className='totalordertxt'>Total Delivered</p>
+                            </div>
+                            <div className='addneworderdiv'>
+                                <Link to='/menu'>
+                                    <button className='addneworder'>Add new orders</button>
+                                </Link>
+                            </div>
+                            
+                        </div>
+                        <div className='allorders' data-aos='fade-up' data-aos-delay='700' data-aos-duration='800'>
                             {
                                 this.state.userorders.length === 0 ?
                                 <div>

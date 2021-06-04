@@ -27,7 +27,7 @@ class Signin extends Component{
         }
         return(
             <div className='signinpage'>
-                <form className='signinforminsigninpage' onSubmit={(event)=>singinnewuser(event)}>
+                <form className='signinforminsigninpage' onSubmit={(event)=>singinnewuser(event)} data-aos='zoom-in'>
                     <p className='signinalimento'>Alimente</p>
                     <div>
                         <input type='text' onChange={(event)=>this.setState({email : event.target.value})} placeholder='Email' className='signinloginname'/>

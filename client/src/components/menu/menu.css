@@ -14,19 +14,18 @@
     text-align: center;
     padding-top: 3vh;
     width: 100vw;
-    font-family: 'Changa One';
-    color: rgb(173, 22, 98);
-    font-size: 3vw;
-    font-weight: bolder;
+    font-family: 'sacramento';
+    color: rgb(24, 58, 78);;;
+    font-size: 3.5vw;
+    font-weight: bold;
     border-bottom: 1px solid rgb(255, 7, 7);
     margin-right: -5vw;
-    padding-bottom: 2.5vh;
 }
 .cart{
     position: relative;
     left: 0vw;
     font-size: 3vw;
-    padding-top: 2vh;
+    padding-top: 4vh;
     color: #000000;
 }
 .cartlength{
@@ -56,11 +55,11 @@
 .ourbest{
     position: relative;
     text-align: center;
-    font-family: 'Changa One';
+    font-family: 'Oregano';
     top: -10vh;
     margin-bottom: -3vh;
-    font-size: 2vw;
-    color: rgb(173, 22, 98);
+    font-size: 3vw;
+    color: rgb(197, 0, 0);  
 }
 .menuheading{
     position: relative;

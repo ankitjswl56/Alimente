@@ -7,6 +7,16 @@ const config = require('../server/config/config').get(process.env.NODE_ENV)
 
 app.use(express.static('client/build'))
 
+const nodemailer = require('nodemailer')
+let transporter = nodemailer.createTransport({
+    service: "gmail",
+    port: 587,
+    secure: false, 
+    auth:{
+        user : 'alimente.restaurant@gmail.com',
+        pass : process.env.EMAILPASS
+    }
+})
 
 const mongoose = require('mongoose')
 mongoose.Promise = global.Promise
@@ -47,6 +57,15 @@ app.post('/api/usersignup',(req,res)=>{
         if(!doc) return res.send({
             signupstatus : false,
             message: 'Something went wrong'
+        })
+        const usercart = new Cart({
+            userid : doc._id
+        })
+        usercart.save((err,doc)=>{
+            if(err) return res.send({
+                signupstatus : false,
+                message : err
+            })
         })
         const token = jwt.sign(user._id.toHexString(),config.SECRET)
         user.token = token
@@ -110,6 +129,7 @@ app.get('/api/isauth',(req,res)=>{
             name : user.name,
             email : user.email,
             phonenumber : user.phonenumber,
+            address : user.address,
             message : 'authorized'
         })
     })
@@ -167,19 +187,48 @@ app.post('/api/contactusform',(req,res)=>{
 })
 
 app.post('/api/usercart',(req,res)=>{
-    const ordered = new Cart({
-        userid : req.body.userid,
-        fooddetail : req.body.fooddetail,
-        totalprice : req.body.totalprice
-    })
-    ordered.save((err,doc)=>{
+    Cart.findOne({'userid' : req.body.userid},(err,doc)=>{
         if(err) return res.send({
             orderconfirm : false,
             message : `Something went wrong: ${err}`
         })
-        res.send({
-            orderconfirm : true,
-            doc : doc
+        doc.orderedfoods.push({
+            fooddetail : req.body.fooddetail,
+            totalprice : req.body.totalprice
+        })
+        doc.save(async function(err,doc){
+            if (err) return res.send({
+                orderconfirm : false,
+                message : `Something went wrong: ${err}`
+            })
+            await transporter.sendMail({
+                from : 'Alimente Restaurant',
+                to : req.body.useremail,
+                subject : 'Order confirmed',
+                html : `<div>
+                <p>Your order is confirmed. </p>
+                <p>Details : </p>
+                <table>
+                <tr>
+                <th>Name</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                </tr>
+                ${req.body.fooddetail.map((each)=>{
+                    return `<tr>
+                    <td>${each.foodquantity}</td> 
+                    <td>${each.foodname}</td>
+                    <td>${each.foodprice}</td>
+                    </tr>`
+                }).join('')}
+                </table>
+                <p>Total Price: <h3> Rs. ${req.body.totalprice}</h3></p>
+                </div>`
+            })
+            res.send({
+                orderconfirm : true,
+                doc : doc
+            })
         })
     })
 })
@@ -188,7 +237,7 @@ app.post('/api/usercart',(req,res)=>{
 app.get('/api/cart',(req,res)=>{
     const token = req.cookies.resloginauth
     const userid = jwt.verify(token, config.SECRET)
-    Cart.find({"userid" : userid},(err,doc)=>{
+    Cart.findOne({"userid" : userid},(err,doc)=>{
         if(err) return res.send({
             userorders : false,
             message : `Error ${err}`
@@ -199,17 +248,52 @@ app.get('/api/cart',(req,res)=>{
         })
     })
 })
-
-const nodemailer = require('nodemailer')
-let transporter = nodemailer.createTransport({
-    service: "gmail",
-    port: 587,
-    secure: false, 
-    auth:{
-        user : 'alimente.restaurant@gmail.com',
-        pass : process.env.EMAILPASS
-    }
+app.post('/api/changepassword',(req,res)=>{
+    const token = req.cookies.resloginauth
+    const userid = jwt.verify(token,config.SECRET)
+    const oldpassword = req.body.oldpassword
+    const newpassword = req.body.newpassword
+    User.findOne({'_id' : userid},(err,userdoc)=>{
+        if(err) return res.send(err)
+        bcrypt.compare(oldpassword,userdoc.password,(err,doc)=>{
+            if(err) return res.send(err)
+            if(!doc) return res.send({
+                passwordupdated : false,
+                message: 'incorrect password'
+            })
+        })
+        userdoc.password = newpassword
+        userdoc.save((err,doc)=>{
+            if(err) return res.send(err)
+            res.send({
+                passwordupdated : true,
+                message : 'Password Successfully Changed. Please Login Again'
+            })
+        })
+    })
 })
+app.post('/api/editdetails',(req,res)=>{
+    const token = req.cookies.resloginauth
+    const userid = jwt.verify(token,config.SECRET)
+    const phone = req.body.phone
+    const address = req.body.address
+    User.findOne({'_id' : userid},(err,userdoc)=>{
+        if(err) return res.send(err)
+        userdoc.phonenumber = phone
+        userdoc.address = address
+        userdoc.save((err,doc)=>{
+            if(err) res.send({
+                detailsupdated : false,
+                message : 'Something went wrong ' + err
+            })
+            res.send({
+                detailsupdated : true,
+                message : 'Details Successfully Updated'
+            })
+        })
+    })
+})
+
 app.post('/api/resetpassword',(req,res)=>{
     const useremail = req.body.email
     const usercode = Math.floor(Math.random()*10000) 
@@ -226,18 +310,18 @@ app.post('/api/resetpassword',(req,res)=>{
                 codeadded : false,
                 message: err
             })
-            let info = await transporter.sendMail({
-                from : 'alimente_restaurant@gmail.com',
-                to : `${useremail}`,
-                subject : 'Reset Password Alimente',
-                html : `<div>
-                    <p>Your code to reset the password is: </p>
-                    <h1>${usercode}</h1>
-                </div>`
-            })
+            // let info = await transporter.sendMail({
+            //     from : 'alimente_restaurant@gmail.com',
+            //     to : `${useremail}`,
+            //     subject : 'Reset Password Alimente',
+            //     html : `<div>
+            //         <p>Your code to reset the password is: </p>
+            //         <h1>${usercode}</h1>
+            //     </div>`
+            // })
             res.send({
                 codeadded : true,
-                emailresponse : info.messageId
+                // emailresponse : info.messageId
             })
         })
     })

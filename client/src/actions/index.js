@@ -66,9 +66,9 @@ export const contactusform = (firstname,lastname,email,phonenumber,message) =>{
     }
 }
 
-export const cartorder = (userid, fooddetail, totalprice) =>{
+export const cartorder = (userid, useremail, fooddetail, totalprice) =>{
     return async function(dispatch){
-        const response = await axios.post('/api/usercart',{userid, fooddetail, totalprice})
+        const response = await axios.post('/api/usercart',{userid, useremail ,fooddetail, totalprice})
         dispatch({
             type: 'ORDER_CONFIRM',
             payload : response.data
@@ -92,6 +92,25 @@ export const picclicked = (picname) =>{
         payload : picname
     }
 }
+export const changepassword = (oldpassword, newpassword) =>{
+    return async function(dispatch){
+        const response = await axios.post('/api/changepassword',{oldpassword, newpassword})
+        dispatch({
+            type : 'CHANGE_PASSWORD',
+            payload  : response.data
+        })
+    }
+}
+export const editdetails = (phone, address) =>{
+    return async function(dispatch){
+        const response = await axios.post('/api/editdetails',{phone, address})
+        dispatch({
+            type : 'EDIT_DETAILS',
+            payload  : response.data
+        })
+    }
+}
+
 export const resetpassword = (email) =>{
     return async function(dispatch){
         const response = await axios.post('/api/resetpassword',{email})

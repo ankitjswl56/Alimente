@@ -38,7 +38,7 @@ class Menu extends Component{
                     <p className='menuheadingname'
                     onClick={()=>this.setState({menuselect : each.split('_').join(' ')})}
                     style={{
-                        color : this.state.menuselect === each.split('_').join(' ') ? 'rgb(173, 22, 98)' : '#000000',
+                        color : this.state.menuselect === each.split('_').join(' ') ? 'rgb(209, 5, 5)' : '#000000',
                         fontWeight : this.state.menuselect === each.split('_').join(' ') ? 'bolder' : null,
                         fontSize : this.state.menuselect === each.split('_').join(' ') ? '1.4vw' : '1.3vw'
                     }}
@@ -108,6 +108,7 @@ class Menu extends Component{
         })
     }
     displaymenuitems = (menu) =>{
+        window.scrollTo(0,0)
         let menuitems = []
         for(let i in this.props.menu[0]){
             if(i.split('_').join(' ') === menu){
@@ -116,18 +117,25 @@ class Menu extends Component{
             }
         }
         if(Array.isArray(menuitems[0])){
-            return menuitems[0].map((Each)=>{
-                return(
-                    <div key={Each.name} className='eachitems'>
-                        <img src={`/images/foodimages/${menu.split(' ').join('')}.png`} className='foodimage'/>
-                        <div className='eachitemdetails'>
-                            <p className='eachitemsname'>{Each.name}</p>
-                            <p className='eachitemsprice'>Rs. {Each.price}</p>
-                        </div>
-                        {this.decidecart(Each)}
-                    </div>
-                )
-            })    
+            return (
+                <div>
+                    <h3 className='eachitemsubtopic'>{menu}</h3>
+                    {
+                    menuitems[0].map((Each)=>{
+                        return(
+                            <div key={Each.name} className='eachitems' data-aos='fade-right'>
+                                <img src={`/images/foodimages/${menu.split(' ').join('')}.png`} className='foodimage'/>
+                                <div className='eachitemdetails'>
+                                    <p className='eachitemsname'>{Each.name}</p>
+                                    <p className='eachitemsprice'>Rs. {Each.price}</p>
+                                </div>
+                                {this.decidecart(Each)}
+                            </div>
+                        )
+                    })   
+                    }
+                </div>
+            ) 
         }else{
             let typesofitems = []
             for(let i in menuitems[0]){
@@ -141,7 +149,7 @@ class Menu extends Component{
                         :
                         Each.map((eachitem)=>{
                             return(
-                                <div key={eachitem.name} className='eachitems'>
+                                <div key={eachitem.name} className='eachitems' data-aos='fade-right'>
                                     <img src={`/images/foodimages/${typesofitems[i-1].split('_').join('')}.png`} className='foodimage'/>
                                     <div className='eachitemdetails'>
                                         <p className='eachitemsname'>{eachitem.name}</p>
@@ -162,7 +170,7 @@ class Menu extends Component{
         return(
             <div className='menu'>
                 <div className='topofmenu'>
-                    <p className='quote'>The best in town</p> 
+                    <p className='quote'>Alimente</p> 
                     <Link to='/cart'><AiOutlineShoppingCart className='cart' onClick={()=>window.scrollTo(0,0)}/>
                         {
                             this.state.cart.length > 0 ?
@@ -174,7 +182,7 @@ class Menu extends Component{
                 </div>
                 <div className='menusection'>
                     <div className='menuheadingsection'>
-                        <p className='ourbest'>The best we offer</p>
+                        <p className='ourbest'>Our Specials</p>
                         <div className='allmenutopicnames'>
                             {
                                 this.props.menu ? 
@@ -197,7 +205,6 @@ class Menu extends Component{
     }
 }
 const mapStateToProps = (state) =>{
-    console.log(state)
     return{
         menu : state.menureducers.menu,
         picclicked : state.picclicked

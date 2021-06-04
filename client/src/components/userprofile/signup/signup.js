@@ -44,7 +44,7 @@ class Signup extends Component{
         }
         return(
             <div className='signuppage'>
-                <form className='loginform' onSubmit={(event)=>submitsignupdetails(event)}>
+                <form className='loginform' onSubmit={(event)=>submitsignupdetails(event)} data-aos='zoom-in'>
                     <label className='singupalimento'>Alimente</label>
                     <div className='formdetailssection'>
                         <input type='text' onChange={(event)=>this.setState({name : event.target.value})} placeholder='Name' className='loginname'/>

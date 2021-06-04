@@ -5,20 +5,22 @@ const cartSchema = ({
         type : String,
         required : true
     },
-    fooddetail : [{
-        foodname : {
-            type : String
-        },
-        foodprice : {
-            type : String
-        },
-        foodquantity : {
-            type : String
+    orderedfoods : [{
+        fooddetail : [{
+            foodname : {
+                type : String
+            },
+            foodprice : {
+                type : String
+            },
+            foodquantity : {
+                type : String
+            }
+        }],
+        totalprice : {
+            type : Number
         }
-    }],
-    totalprice : {
-        type : Number
-    }
+    }]
 })
 
 const Cart = mongoose.model('Cart',cartSchema)

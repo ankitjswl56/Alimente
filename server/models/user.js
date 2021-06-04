@@ -22,6 +22,10 @@ const userschema = mongoose.Schema({
         maxlength : 10,
         minlength : 10
     },
+    address : {
+        type : String,
+        maxlength : 100
+    },
     passresetcode : {
         type : Number,
         minlength : 4

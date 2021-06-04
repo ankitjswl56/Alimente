@@ -61,7 +61,7 @@ class Resetpassword extends Component{
         return(
             !this.state.resetcodesent ?
             <div className='resetpasswordpage'>
-                <form className='resetpasswordform' onSubmit={(event)=>this.resetpasswordsubmit(event)}>
+                <form className='resetpasswordform' onSubmit={(event)=>this.resetpasswordsubmit(event)} data-aos='zoom-in'>
                     <p className='signinalimentoinreset'>Alimente</p>
                     <div>
                         <input type='text' onChange={(event)=>this.setState({email :event.target.value})} placeholder='Enter Email' className='resetemail'/>
@@ -71,7 +71,7 @@ class Resetpassword extends Component{
             </div>
             :
             <div className='resetpasswordpage'>
-                <form className='resetpasswordform codeform' onSubmit={(event)=>this.codesubmit(event)}>
+                <form className='resetpasswordform codeform' onSubmit={(event)=>this.codesubmit(event)} data-aos='zoom-in'>
                     <p className='signinalimentoinreset codealimente'>Alimente</p>
                     <div>
                         <input type='text' value={this.state.usercode} onChange={(event)=>this.setState({usercode :event.target.value})} placeholder='Enter Your Code' className='resetemail codeusercode'/>

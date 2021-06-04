@@ -4,7 +4,10 @@ import { connect } from 'react-redux';
 import { logoutuser,fetchorders } from '../../actions';
 import Dashboard from './dashboard/dashboard';
 import Userdetails from './userdetails/userdetails';
-
+import {BiLogOut} from 'react-icons/bi';
+import {GrDeliver} from 'react-icons/gr'
+import {BiUserCircle} from 'react-icons/bi'
+ 
 class UserProfile extends Component{
     state = {
         orders : true,
@@ -35,14 +38,17 @@ class UserProfile extends Component{
             <div className='userprofile'>
                 <div className='usersection'>
                     <div className='buttonsdiv'>
-                        <button onClick={()=>orderbuttonclicked()} className='eachbutton'>
-                            Orders
+                        <div className='userlogoinprofile'>
+                            <BiUserCircle/>
+                        </div>
+                        <button onClick={()=>orderbuttonclicked()} className='eachbutton logoutbutton'>
+                            <GrDeliver/>
                         </button>
-                        <button  onClick={()=>userprofileclicked()} className='eachbutton'>
-                            User Profile
+                        <button onClick={()=>userprofileclicked()} className='eachbutton logoutbutton'>
+                            <BiUserCircle/>
                         </button>
                         <button onClick={()=>{logoutuser()}} className='eachbutton logoutbutton'>
-                            Logout
+                            <BiLogOut/>
                         </button>
                     </div>
                     <div className='dashboardsection'>
