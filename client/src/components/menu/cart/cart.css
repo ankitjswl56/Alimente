@@ -286,3 +286,164 @@ html{
     font-weight: bolder;
     cursor: pointer;
 }
+
+
+
+@media(max-width:650px){
+    .cartpage{
+        width: 100vw;   
+    }
+    .backbutton{
+        top: 1.5vh;
+        left: 3vw;
+        height: 5vh;
+        font-size: 2.6vw;
+    }
+    .carttxt{
+        font-size: 4vw;
+        top: 1.5vh;
+        height: 6vh;
+    }
+    .emptycarttxt{
+        top: 7vh;
+    }
+    .cartbox{
+        width: 88vw;
+        left: 6vw;
+        height: 35vh;
+        top: 2.5vh;
+    }
+    .cartboxinside{
+        width: 88vw;
+        left: 0vw;
+        height: 26vh;
+        top: 0vh;
+    }
+    .headingincart{
+        width: 88vw;
+        height: 3vh;
+    }
+    .headingnameincart{
+        left: 3vw;
+        top: 1vh;
+        height: 3vh;
+        font-size: 2.3vw;
+    }
+    .headingquantityincart{
+        font-size: 2.3vw;
+        top: 1vh;
+        left: 40vw;
+    }
+    .headingpriceincart{
+        top: 1vh;
+        font-size: 2.3vw;
+        left: 60vw;
+    }
+    .checkoutbox{
+        width: 30vw;
+        height: 17vh;
+        margin-bottom: 20vh;
+        top: 8vh;
+        left: 64vw;
+    }
+    .eachitem{
+        width: 88vw;
+        height: 6vh;
+    }
+    .numbersforitems{
+        width: 1vw;
+        font-size: 2.4vw;
+        padding-top: 1vh;
+        padding-left: 1vw;
+    }
+    .itemnameandprice{
+        width: 45vw;
+        font-size: 2.2vw;
+        padding-left: 2vw;
+        padding-top: 1vh;
+    }
+    .itemprice{
+        padding-top: 1vw;
+    }
+    .itemquantity{
+        width: 3vw;
+        padding-top: 2.2vh;
+        font-size: 2.6vw;
+    }
+    .buttonincart{
+        height: 2vh;
+        width: 4vw;
+        border-radius: .5vw;
+        top: 0vh;
+        left: 0vw;
+        margin-top: 2vh;
+    }
+    .totalpriceforeach{
+        left: 17vw;
+        padding-top: 1.5vh;
+        font-size: 2.2vw;
+    }
+    .billdetails{
+        height: 6.5vh;
+    }
+    .totalbill{
+        left: 1vw;
+        top: 0vh;
+        font-size: 2vw;
+        width: 15vw;
+        padding-top: -1vh;
+    }
+    .totalbillnum{
+        left:1vw;
+        top: 0vh;
+        font-size: 2vw;
+        width: 10vw;
+        padding-top: 1vh;
+    }
+    .checkoutbutton{
+        left: -.2vw;
+        top: 1.6vh;
+        width: 30.2vw;
+        height: 3vh;
+        font-size: 2.3vw;
+    }
+    .checkoutprocess{
+        top: -70vh;
+        left: 35vw;
+        height: 30vh;
+        width: 35vw;
+    }
+    .buttoncross{
+        left: 27vw;
+        top: 1vh;
+        height: 2vh;
+        width: 1vw;
+    }
+    .paytxt{
+        font-size: 2vw;
+        top: 2vh;
+    }
+    .optionstopay{
+        left: -5vw;
+        height: 12vh;
+        top: 5vh;
+        width: 30vw;
+    }
+    .orderbuttonincart{
+        left: 10vw;
+        top: 8vh;
+        height: 3vh;
+        width: 15vw;
+        font-size: 2.3vw;
+    }
+    .eachradio{
+        width: 30vw;
+        height: 3vh;
+        padding-left: 8vw;
+    }
+    .radiooptionsname{
+        font-size: 2.3vw;
+        padding-left: 1vw;
+        margin-top: .5vh;
+    }
+}

@@ -39,21 +39,41 @@ class Contact extends Component{
         }
         return (
             <div className='contactus'>
-                <label className='contactustext'>Contact Us</label>
-                <p className='formmsg'>Get in touch by sending us an email using the form below.</p>
-                <form className='contactform' onSubmit={(event)=>Contactformsubmit(event)}>
-                    <div style={{display:'inline-flex'}}>
-                        <input type='text' onChange={(event)=>this.setState({firstname : event.target.value})} className='contactfirstName' placeholder='Enter First Name'/>
-                        <input type='text' onChange={(event)=>this.setState({lastname : event.target.value})} className='contactfirstName' placeholder='Enter Second Name'/>
+                <div className='contactusform' data-aos='flip-down' data-aos-delay='300'>
+                    <p className='contactustext'>Contact Us</p>
+                    <p className='formmsg'>Get in touch by sending us an email using the form below.</p>
+                    <form className='contactform' onSubmit={(event)=>Contactformsubmit(event)}>
+                        <div>
+                            <input type='text' onChange={(event)=>this.setState({firstname : event.target.value})} className='contactfirstName' placeholder='Enter First Name'/>
+                            <input type='text' onChange={(event)=>this.setState({lastname : event.target.value})} className='contactfirstName' placeholder='Enter Second Name'/>
+                            <input type='text' onChange={(event)=>this.setState({email : event.target.value})} className='contactfirstName' placeholder='Enter Email'/>
+                            <input type='text' onChange={(event)=>this.setState({phonenumber : event.target.value})} className='contactfirstName' placeholder='Enter Phone Number'/>
+                        </div>
+                        <div className='contactlast3'>
+                            <textarea onChange={(event)=>{this.setState({message : event.target.value})}} className='contactMessage'></textarea>
+                        </div>
+                        <button className='contactsendbutton' type='submit'>Send</button>
+                    </form>
+                </div>
+                <div className='orincontactus' data-aos='fade-up'>
+                    <p className='ortext'>Or,</p>
+                </div>
+                <div className='visitussection' data-aos='fade-right' data-aos-delay='500' data-aos-duration='700'>
+                    <p className='visitustext'>Visit us</p>
+                    <p className='hosttxt'>We are located in Biratnagar, and we would love to host you here.</p>
+                    <div className='tablediv'>
+                        <table className='timingtable'>
+                            <tr>
+                                <th className='tdborder'>Opening</th>
+                                <th className='tdborder'>Closing</th>
+                            </tr>
+                            <tr>
+                                <td className='tdborder'>11:00 AM</td>
+                                <td className='tdborder'>9:00 PM</td>
+                            </tr>
+                        </table>
                     </div>
-                    <br/>
-                    <div className='contactlast3'>
-                        <input type='text' onChange={(event)=>this.setState({email : event.target.value})} className='contactEmail' placeholder='Enter Email'/>
-                        <input type='text' onChange={(event)=>this.setState({phonenumber : event.target.value})} className='contactEmail' placeholder='Enter Phone Number'/>
-                        <textarea onChange={(event)=>{this.setState({message : event.target.value})}} className='contactMessage'></textarea>
-                    </div>
-                    <button className='contactsendbutton' type='submit'>Send</button>
-                </form>
+                </div>
             </div>
         )
     }

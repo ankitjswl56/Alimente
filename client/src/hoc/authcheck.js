@@ -33,7 +33,7 @@ export default function(ComposedClass, isallowed){
                 )
             }
             return(
-                <ComposedClass user={this.props.user}/>
+                <ComposedClass user={this.props.user} sectionnname={ComposedClass}/>
             )
         }
     }

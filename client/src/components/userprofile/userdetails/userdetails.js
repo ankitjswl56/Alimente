@@ -75,7 +75,7 @@ class Userdetails extends Component{
                     this.state.changepassword === false && this.state.editaddress === false ? 
                     <div>
                         <div className='userimage' data-aos='fade-up'><FaUserAlt className='userimagelogo'/></div>
-                        <div className='nameofuser belowimage' data-aos='fade' data-aos-delay='500' data-aos-duration='1000'>
+                        <div className='belowimage' data-aos='fade' data-aos-delay='500' data-aos-duration='1000'>
                             {this.props.user.login.name}
                         </div>
                         <div className='userinfo'>
@@ -103,8 +103,8 @@ class Userdetails extends Component{
                             <p className='signinalimento alimentepass'>Alimente</p>
                             <p className='chngpswrdtxt'>Change Password</p>
                             <input type='password' className='newpassword' placeholder='Old Password' onChange={(event)=>this.setState({oldpassword : event.target.value})}/>
-                            <input type='password' className='newpassword' placeholder='New Password' onChange={(event)=>this.setState({newpassword : event.target.value})}/>
-                            <input type='password' className='newpassword' placeholder='New Password' onChange={(event)=>this.setState({newpassword2 : event.target.value})}/>
+                            <input type='password' className='newpassword newpassmobile' placeholder='New Password' onChange={(event)=>this.setState({newpassword : event.target.value})}/>
+                            <input type='password' className='newpassword newpassmobile' placeholder='New Password' onChange={(event)=>this.setState({newpassword2 : event.target.value})}/>
                             <button onClick={(event)=>this.reqchangepassword(event)} className='newpasssbtn'>Submit</button>
                         </div>
                     </div>
@@ -117,8 +117,8 @@ class Userdetails extends Component{
                             <p className='signinalimento alimentepass'>Alimente</p>
                             <p className='chngpswrdtxt'>Edit Details</p>
                             <p className='newpassword lgineml'>{this.props.user.login.email}</p>
-                            <input type='text' className='newpassword' value={this.state.phone} placeholder='Phone Number' onChange={(event)=>this.setState({phone : event.target.value})}/>
-                            <input type='text' className='newpassword' value={this.state.address} placeholder='Address' onChange={(event)=>this.setState({address : event.target.value})}/>
+                            <input type='text' className='newpassword newpassmobile' value={this.state.phone} placeholder='Phone Number' onChange={(event)=>this.setState({phone : event.target.value})}/>
+                            <input type='text' className='newpassword newpassmobile' value={this.state.address} placeholder='Address' onChange={(event)=>this.setState({address : event.target.value})}/>
                             <button onClick={(event)=>this.editdetails(event)} className='newpasssbtn'>Submit</button>
                         </div>
                     </div>

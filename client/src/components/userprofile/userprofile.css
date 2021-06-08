@@ -78,3 +78,28 @@
     font-family: 'Rubik';
     font-weight: bolder;
 }
+
+
+@media(max-width:650px){
+    .buttonsdiv{
+        width: 15vw;
+    }
+    .userlogoinprofile{
+        top: 5vh;
+        padding-top: 1vh;
+        left: 5vw;
+        padding-left: 0vw;
+        padding-top: 0vh;
+        height: 3vh;
+        width: 6vw;
+        font-size: 6vw;
+    }
+    .eachbutton{
+        height: 4vh;
+        width: 8vw;
+        left: 4vw;
+        font-size: 5vw;
+        margin-bottom: 5vh;
+        margin-right: 5vw;
+    }
+}

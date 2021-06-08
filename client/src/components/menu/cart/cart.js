@@ -125,9 +125,9 @@ class Cart extends Component{
                                                     <p className='itemname'>{each.name}</p>
                                                     <p className='itemprice'>Rs. {each.price}</p>
                                                 </div>
-                                                <button className='buttonincart' onClick={()=>decreaseincart(each)}>-</button>
+                                                <button className='buttonincart' onClick={()=>decreaseincart(each)}><p style={{fontSize: '1.8vw'}}>-</p></button>
                                                 <p className='itemquantity'>{each.quantity}</p>
-                                                <button className='buttonincart' onClick={()=>increaseincart(each)}>+</button>
+                                                <button className='buttonincart' onClick={()=>increaseincart(each)}><p style={{fontSize: '1.8vw'}}>+</p></button>
                                                 <p className='totalpriceforeach'>Rs. {each.price * each.quantity}</p>
                                             </div>
                                         )

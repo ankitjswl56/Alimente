@@ -178,3 +178,53 @@
     color: rgb(20, 20, 202);
     cursor: pointer;
 }
+
+
+@media(max-width:650px){
+    .dashboardtxt{
+        font-size: 3vw;   
+    }
+    .totalorderdetails{
+        height: 3vh;
+    }
+    .totalordernum{
+        font-size: 4vw;
+    }
+    .totalordertxt{
+        font-size: 1.9vw;
+    }
+    .addneworder{
+        top: 0vh;
+        height: 3.5vh;
+        font-size: 2.2vw;
+    }
+    .allorders{
+        top: 3vh;
+        height: 60vh;
+        width: 75vw;
+    }
+    .heading{
+        width: 75vw;
+        height: 3vh;
+    }
+    .allordersinside{
+        top: .5vh;
+        left: 0vw;
+        height: 60vh;
+        width: 75vw;
+        color: #000000;
+    }
+    .ordereddetail{
+        width: 75vw;
+        padding-top: 1vh;
+        font-size: 1.9vw;
+    } 
+    .eachtotalprice{
+        width: 20vw;
+        padding-bottom: 0vh;
+        font-size: 2vw;
+        height: 2vh;
+        padding-top: 1vh;
+        padding-left: 59vw;
+    }   
+}

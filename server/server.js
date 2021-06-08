@@ -310,18 +310,18 @@ app.post('/api/resetpassword',(req,res)=>{
                 codeadded : false,
                 message: err
             })
-            // let info = await transporter.sendMail({
-            //     from : 'alimente_restaurant@gmail.com',
-            //     to : `${useremail}`,
-            //     subject : 'Reset Password Alimente',
-            //     html : `<div>
-            //         <p>Your code to reset the password is: </p>
-            //         <h1>${usercode}</h1>
-            //     </div>`
-            // })
+            let info = await transporter.sendMail({
+                from : 'alimente_restaurant@gmail.com',
+                to : `${useremail}`,
+                subject : 'Reset Password Alimente',
+                html : `<div>
+                    <p>Your code to reset the password is: </p>
+                    <h1>${usercode}</h1>
+                </div>`
+            })
             res.send({
                 codeadded : true,
-                // emailresponse : info.messageId
+                emailresponse : info.messageId
             })
         })
     })

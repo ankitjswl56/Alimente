@@ -26,8 +26,9 @@
 }
 .linksinheader{
     position: relative;
-    height: 3vh;
-    margin-top: 2vh;
+    height: 4.5vh;
+    padding-bottom: 2vh;
+    margin-top: -1.5vh;
     margin-right: 3vw;
     color: #ffffff;
     background: none;
@@ -44,10 +45,10 @@
 }
 .userlogo{
     position: relative;
-    top: .5vh;
-    left: -1vw;
+    top: 3vh;
+    left: 0vw;
     margin-right: -3vw;
-    font-size: 3vw;
+    font-size: 1.8vw;
 }
 
 
@@ -60,20 +61,22 @@
         font-size: 4vw;
     }
     .headerlinks{
-        left: 35vw;
-        width: 50vw;
+        left: 30vw;
+        width: 55vw;
     }
     .linksinheader{
         position: relative;
-        height: 3vh;
-        margin-top: -.5vh;
+        height: 2vh;
+        top: -1vh;
+        padding-bottom: 1vh;
+        padding-top: 2vh;
         margin-right: 0vw;
-        font-size: 1.5vw;    
+        font-size: 1.5vw;   
     }
     .userlogo{
         position: relative;
-        top: 1vh;
+        top: .5vh;
         left: 2vw;
-        font-size: 2vw;
+        font-size: 3vw;
     }
 }

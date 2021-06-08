@@ -40,10 +40,10 @@ class Menu extends Component{
                     style={{
                         color : this.state.menuselect === each.split('_').join(' ') ? 'rgb(209, 5, 5)' : '#000000',
                         fontWeight : this.state.menuselect === each.split('_').join(' ') ? 'bolder' : null,
-                        fontSize : this.state.menuselect === each.split('_').join(' ') ? '1.4vw' : '1.3vw'
+                        fontSize : this.state.menuselect === each.split('_').join(' ') ? '1.8vw' : '1.6vw'
                     }}
                     >
-                        {each.split('_').join(' ')}
+                        <p className='eachmenuheadingnmae'>{each.split('_').join(' ')}</p>
                     </p>
                 </div>
             )
@@ -56,9 +56,9 @@ class Menu extends Component{
                 flag = 1
                 return (
                     <div className='addedincartbuttons'>
-                        <button className='addedtocart' onClick={()=>this.removeitem(i)}>-</button>
+                        <button className='addedtocart' onClick={()=>this.removeitem(i)}><p style={{fontSize: '1.8vw'}}>-</p></button>
                         <p className='addedtocartquantity'>{i.quantity}</p>
-                        <button className='addedtocart' onClick={()=>this.addtocart(i)}>+</button>
+                        <button className='addedtocart' onClick={()=>this.addtocart(i)}><p style={{fontSize: '1.8vw'}}>+</p></button>
                     </div>
                 ) 
                 
@@ -145,7 +145,8 @@ class Menu extends Component{
                 return(
                     <div >
                         {Array.isArray(Each) != true ?  
-                        <h3 className='eachitemsubtopic'>{Each.split('_').join(' ')}</h3>
+                        [console.log(Each),
+                        <h3 className='eachitemsubtopic'>{Each.split('_').join(' ')}</h3>]
                         :
                         Each.map((eachitem)=>{
                             return(
@@ -170,7 +171,7 @@ class Menu extends Component{
         return(
             <div className='menu'>
                 <div className='topofmenu'>
-                    <p className='quote'>Alimente</p> 
+                    <p className='quote'>Our Specials</p> 
                     <Link to='/cart'><AiOutlineShoppingCart className='cart' onClick={()=>window.scrollTo(0,0)}/>
                         {
                             this.state.cart.length > 0 ?
@@ -182,7 +183,6 @@ class Menu extends Component{
                 </div>
                 <div className='menusection'>
                     <div className='menuheadingsection'>
-                        <p className='ourbest'>Our Specials</p>
                         <div className='allmenutopicnames'>
                             {
                                 this.props.menu ? 

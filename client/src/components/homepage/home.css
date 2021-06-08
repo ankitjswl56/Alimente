@@ -2,7 +2,6 @@
     position: relative;
     text-align: center;
 }
-
 .imagesformat{
     position: relative;
     height: 100vh;
@@ -14,6 +13,7 @@
     top: 25vh;
     color: #ffffff;
     font-family: 'changa One';
+    font-size: 5vw;
 }
 /* #05eecf; */
 .text1{
@@ -628,5 +628,330 @@
 
 
 @media (max-width:600px){
+    .imagesformat{
+        height: 40vh;
+        width: 100vw;
+    }
+    .textinimage{
+        top: 5vh;
+    }
+    .text1{
+        font-size: 2vh;
+        left: 20vw;
+        width: 65vw;
+    }
+    .text2{
+        font-size: 2.3vh;
+        margin-top: 2vh;
+        left: 10vw;
+        width: 80vw;
+    }
+    .text3{
+        font-size: 1.3vh;
+        margin-top: 2vh;
+        left: 10vw;
+        width: 80vw;
+    }
+    .orderbutton{
+        left: 10vw;
+        top: 0vh;
+        height: 2vh;
+        width: 15vw;
+        font-size: 2vw;
+    }
+    .welcomesection{
+        width: 100vw;
+        height: 100vh;
+    }
+    .welcometext{
+        top: 0vh;
+        left: 30vw;
+        font-size: 4.5vw;
+        margin-top: 5vh;
+        width: 45vw;
+    }
+    .carpediemtext{
+        left: 23vw;
+        width: 60vw;
+        font-size: 1.9vw;
+        margin-top: 3vh;
+    }
+    .ingredient1{
+        top: 5vh;
+        height: 40vh;
+        width: 100vw;
+    }
+    .ingredient1txt1{
+        left: 10vw;
+        top: 10vh;
+        height: 10vh;
+        width: 50vw;
+        font-size: 3.5vw;
+    }
+    .ingredient1txt2{
+        left: 10vw;
+        width: 45vw;
+        top: 3vh;
+        font-size: 1.9vw;
+    }
+    .viewmenu{
+        left: 10vw;
+        top: 5vh;
+        height: 3vh;
+        width: 20vw;
+        font-size: 1.9vw;
+    }
+    .ourservicesection{
+        top: 0vh;
+        height: 50vh;
+        width: 100vw;
+    }
+    .chefimg{
+        left: 5vw;
+        height: 45vh;
+        top: 0vh;   
+        width: 55vw;
+    }
+    .servicesectiontxt1{
+        top: 15vh;
+        left: 7vw;
+        width: 35vw;
+        height: 10vh;
+        font-size: 3.2vw;
+    }
+    .servicesectiontxt2{
+        top: 8vh;
+        left: 7vw;
+        width: 40vw;
+        height: 10vh;
+        font-size: 1.9vw;
+    }
     
+    .viewmenu2{
+        left: 7vw;
+        top: 6vh;
+        height: 3vh;
+        width: 15vw;
+        font-size: 1.9vw;
+    }
+    .ourrecommendations{
+        width: 100vw;
+        height: 75vh;
+        
+    }
+    .recommendedpics{
+        top: 5vh;
+        width: 20vw
+    }
+    .momopic{
+        top: 5vh;
+        width: 25vw;
+    }
+    .momoname{
+        height: 2vh;
+        top: 7vh;
+        font-size: 2vw;
+    }
+    .tacosname{
+        height: 2vh;
+        top: 7vh;
+        font-size: 2vw;
+    }
+    .ourspecialtxt{
+        left: 35vw;
+        top: 5vh;
+        font-size: 5vw;
+        width: 45vw;
+    }
+    .allspeicals1{
+        left: 5vw;
+        width: 90vw;
+        top: 10vh;
+        height: 35vh;
+    }
+    .allspecials2{
+        margin-top: 5vh;
+        left: 5vw;
+        width: 90vw;
+        top: 0vh;
+        height: 35vh;
+    }
+    .boxinspecials{
+        height: 18vh;
+        width: 25vw;
+        margin: 3vw;
+    }
+    .spcialsnames{
+        height: 2vh;
+        top: 5vh;
+        font-size: 2.5vw;
+    }
+    .reviews{
+        width: 100vw;
+        height: 50vh;
+    }
+    .reviewertxt{
+        top: 5vh;
+        font-size: 4vw;
+    }
+    .reviewscroll{
+        left: 10vw;
+        top: 8vh;
+        width: 80vw;    
+        height: 45vh;
+    }
+    .personimage{
+        left: 30vw;
+        height: 16vh;
+        width: 18vw;
+    }
+    .review{
+        height: 40vh;
+        width: 80vw;
+    }
+    .reviewheading{
+        font-size: 2.8vw;
+        top: 6vh;
+    }
+    .reviewdesc{
+        font-size: 2.4vw;
+        top: 8vh;
+        left: 5vw;
+        width: 70vw;
+    }
+    .reviewername{
+        left: -3vw;
+        top: 2vh;
+        width: 25vw;
+    }
+    .howwework{
+        height: 45vh;
+        width: 100vw;
+    }
+    .itssimple{
+        font-size: 2.6vw;
+        top: 5vh;
+    }
+    .weworkingtext{
+        top: 7vh;
+        font-size: 5vw;
+    }
+    .weworkingtext2{
+        left: 10vw;
+        width: 80vw;
+        top: 10vh;
+        font-size: 2.6vw;
+    }
+    .circle{
+        width: 15vw;
+        height: 10vh;;
+    }
+    
+    .circlepos1{
+        left: 15vw;
+        top: 15vh; 
+    }
+    .circlepos2{
+        left: 25vw;
+        top: 15vh; 
+    }
+    .circlepos3{
+        left: 35vw;
+        top: 15vh; 
+    }
+    .circletopic{
+        font-size: 2.3vw;
+        top: 18vh;
+    }
+    .crtopic1{
+        left: 12vw;
+    }
+    .crtopic2{
+        left: 23vw;
+    }
+    .crtopic3{
+        left: 32vw;
+    }
+    .topicdesc{
+        font-size: 2.2vw;
+        width: 20vw;
+        top: 18vh;
+    }
+    .desc1{
+        left: 12vw;
+    }
+    .desc2{
+        left: 24vw;
+    }
+    .desc3{
+        left: 32vw;
+    }
+    .fa-meal{
+        top: 3vh;
+        left: 3vw;
+        font-size: 8.5vw;
+    }
+    .loginsection{
+        height: 40vh;
+        width: 100vw;
+    }
+    .loginforminhomepage{
+        top: 5vh;
+        left: 10vw;
+        height: 250px;
+        width: 40vw;
+    }
+    .loginimg{
+        margin-top: 5vh;
+        left: 8vw;
+        width: 50vw;
+    }
+    .healthymealtxt{
+        font-size: 2.3vw;
+        top: 0vh;
+    }
+    .signupstepstext{
+        font-size: 2.8vw;
+        top: 2vh;
+    }
+    .formdesctext{
+        font-size: 2.2vw;
+        top: 3vh;
+        left: -2vw;
+        width: 45vw;
+    }
+    .formdetails{
+        top: 7vh;
+        left: 5vw;
+        width: 30vw;
+        height: 130px;
+    }
+    .textformatinform {
+        top: -2vh;
+        left: -2vw;
+        width: 30vw;
+        height: 18px;
+        font-size: 2.2vw;
+        margin-bottom: 1vh;
+        padding-left: 1vw;
+    }
+    .buttonofformdetails{
+        width: 26vw;
+        height: 6vh;
+        left: 2vw;
+    }
+    .formsubmit{
+        top: -2vh;
+        margin-left: -2vw;
+        height: 3vh;
+        width: 12vw;
+        font-size: 1.5vw;
+    }
+    .orbetweenbuttons{
+        font-size: 2.3vw;
+        top: -1vh;
+        height: 1vh;
+        margin-left: .7vw;
+        margin-right: 3vw;
+    }
 }

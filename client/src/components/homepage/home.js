@@ -257,8 +257,8 @@ class Home extends Component{
                             </div>
                         </div>
                     </div>
-                    <div data-aos='fade-left' data-aos-delay='700'>
-                        <img alt='homeimg' src='./images/login.png' className='loginimg'/>
+                    <div>
+                        <img alt='homeimg' src='./images/login.png' className='loginimg' data-aos='fade-right' data-aos-delay='700'/>
                     </div>
                 </div>
             </div>

@@ -78,66 +78,46 @@
 
 @media(max-width:600px){
     .signuppage{
-        height: 90vh;
+        height: 80vh;
         width: 100vw;
         margin-bottom: -1vh;
     }
     .singupalimento{
-        top: 2vh;
-        left: 10vw;
+        top: 4vh;
+        left: 16vw;
+        font-size: 5vw;
     }
     .formdetailssection{
         margin-top: -9vh;
     }
     .loginform{
-        top: 15vh;
-        left: 5vw;
-        width: 30vw;
-        height: 60vh;
-        left: 35vw;
+        top: 20vh;
+        width: 50vw;
+        height: 290px;
+        left: 25vw;
         border-radius: 7%;
         background: #ffffff;
     }
     .loginname{
-        position: relative;
-        top:13vh;
-        left: 2vw;
-        width: 25vw;
-        height: 7vh;
-        font-family: 'Rubik';
-        font-weight: bolder;
-        font-size: 1.2vw;
-        border: 1px solid #000000;
-        border-top-left-radius: 5% 20%;
-        border-top-right-radius: 5% 20%;
-        border-bottom-left-radius: 5% 20%;
-        border-bottom-right-radius: 5% 20%;
-        outline: none;
+        top:15vh;
+        left: 4vw;
+        width: 40vw;
+        height: 25px;
         margin-bottom: 2vh;
         padding-left: 1vw;
+        font-size: 2.3vw;
     }
     .buttoninsignuppage{
-        position: relative;
-        top: 13vh;
-        left: 3vw;
-        width: 10vw;
-        height: 5vh;
-        background: #000000;
-        color: #ffffff;
-        font-size: 1.3vw;
-        border-radius: .5vw;
-        border: none;
-        outline: none;
-        cursor: pointer;
-        margin-right: 2vw;
+        top: 0vh;
+        left: 7vw;
+        width: 15vw;
+        height: 2.5vh;
+        font-size: 2.3vw;
+        margin-right: 4vw;
     }
     .ortxtinsignup{
-        position: relative;
-        font-family:'Oregano';
-        font-size: 1.5vw;
-        top: 13.5vh;
-        font-weight: bolder;
-        color: #000000;
-        left: 2vw;
+        font-size: 2.5vw;
+        top: .5vh;
+        left: 5vw;
     }
 }
